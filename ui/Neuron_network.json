@@ -87,6 +87,49 @@
       "tag": "fun_no_packet"
     },
     {
+      "type": "Switch",
+      "name": "延迟放行包",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [5, 0, 5, 0],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "off": "close/NeuronOff_Blink.png",
+        "on": "open/NeuronOn_Blink.png",
+        "icon": "open/NeuronOn_Blink.png"
+      },
+      "tag": "fun_blink",
+      "items": [
+        {
+          "type": "CheckBox",
+          "key": "only_delay_send",
+          "name": "仅延迟发送",
+          "color": "$TextColor",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "delay",
+          "name": "自动放行",
+          "color": "$TextColor",
+          "size": 8
+        },
+        {
+          "type": "SeekBar",
+          "key": "delay_ms",
+          "format": "放行延迟%dms",
+          "color": "$TextColor",
+          "size": 8,
+          "padding": [0, 0, 0, 0],
+          "value": 500,
+          "min": 100,
+          "max": 3000
+        }
+      ]
+    },
+    {
       "type": "TextView",
       "name": "网络数据包管理+",
       "color": "$TextColor",

@@ -45,7 +45,54 @@
         "on":"open/NeuronOn_WaterMark.png",
         "icon":"open/NeuronOn_WaterMark.png"
       },
-      "tag": "fun_watermark"
+      "tag": "fun_watermark",
+      "bind_keys": ["P"],
+      "items": [
+        {
+          "type": "SeekBar",
+          "key": "rotation",
+          "format": "旋转角度%.2f",
+          "color": "$TextColor",
+          "size": 8,
+          "padding": [0, 0, 0, 0],
+          "value": -30.0,
+          "min": -180.0,
+          "max": 188.0
+        },
+        {
+          "type": "SeekBar",
+          "key": "size",
+          "format": "文本大小%.2f",
+          "color": "$TextColor",
+          "size": 8,
+          "padding": [0, 0, 0, 0],
+          "value": 70.0,
+          "min": 10.0,
+          "max": 100.0
+        },
+        {
+          "type": "SeekBar",
+          "key": "alpha",
+          "format": "透明度%d",
+          "color": "$TextColor",
+          "size": 8,
+          "padding": [0, 0, 0, 0],
+          "value": 76,
+          "min": 0,
+          "max": 255
+        },
+        {
+          "type": "ColorPicker",
+          "key": "color",
+          "name": "自定义颜色",
+          "size": 8,
+          "color": "$TextColor",
+          "padding": [10, 10, 10, 10],
+          "default_color": -65281,
+          "ok": "确定",
+          "cancel": "取消"
+        }
+      ]
     },
     {
       "type": "Switch",
@@ -339,6 +386,34 @@
         5
       ],
       "open": "Neuron_Debug"
+    },
+    {
+      "type": "TextView",
+      "name": "保存全部配置",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [5, 5, 5, 5],
+      "shortcut": {
+        "type": "ClickButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "icon": "other/Neuron_SaveMenusConfig.png"
+      },
+      "tag": "fun_save_menus_config"
+    },
+    {
+      "type": "TextView",
+      "name": "加载全部配置",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [5, 5, 5, 5],
+      "shortcut": {
+        "type": "ClickButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "icon": "other/Neuron_LoadMenusConfig.png"
+      },
+      "tag": "fun_load_menus_config"
     }
   ]
 }

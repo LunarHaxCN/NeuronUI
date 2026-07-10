@@ -1,3 +1,8 @@
+/**
+ * @author: WhiteWallTeam
+ * @date: 2025.10.13
+ * @description: ImGui 控制面板
+ */
 
  // 定义数据对象
 let settings = {

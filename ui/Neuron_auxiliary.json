@@ -538,6 +538,195 @@
         "icon":"other/Neuron_CreateWorld.png"
       },
       "tag": "fun_create_world"
+    },
+    {
+      "type": "Switch",
+      "name": "自动切换工具",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [5, 0, 5, 0],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "off": "close/NeuronOff_AutoTool.png",
+        "on": "open/NeuronOn_AutoTool.png",
+        "icon": "open/NeuronOn_AutoTool.png"
+      },
+      "tag": "fun_auto_tool"
+    },
+    {
+      "type": "TextView",
+      "name": "租赁服密码爆破",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [8, 8, 8, 8],
+      "shortcut": {
+        "type": "ClickButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "icon": "other/Neuron_RentalPwdCrack.png"
+      },
+      "tag": "fun_client_manager"
+    },
+    {
+      "type": "Switch",
+      "name": "联机假名",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [5, 0, 5, 0],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "off": "close/NeuronOff_FakeName.png",
+        "on": "open/NeuronOn_FakeName.png",
+        "icon": "open/NeuronOn_FakeName.png"
+      },
+      "tag": "fun_fake_name",
+      "items": [
+        {
+          "type": "EditText",
+          "name": "名称",
+          "key": "content",
+          "color": "$TextColor",
+          "max_lines": 1,
+          "register_setting": "fake_name_save"
+        },
+        {
+          "type": "CheckBox",
+          "key": "packet",
+          "name": "数据包模式",
+          "color": "$TextColor",
+          "size": 8
+        }
+      ]
+    },
+    {
+      "type": "Switch",
+      "name": "自定义等级标识",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [5, 0, 5, 0],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "off": "close/NeuronOff_CustomGrowthLevel.png",
+        "on": "open/NeuronOn_CustomGrowthLevel.png",
+        "icon": "open/NeuronOn_CustomGrowthLevel.png"
+      },
+      "tag": "fun_custom_growth_level",
+      "items": [
+        {
+          "type": "RadioGroup",
+          "key": "type",
+          "name": "标识",
+          "color": "$TextColor",
+          "size": 8,
+          "items": [
+            {
+              "key": "wood",
+              "name": "橡木",
+              "color": "$TextColor",
+              "size": 8
+            },
+            {
+              "key": "albizia",
+              "name": "合欢木",
+              "color": "$TextColor",
+              "size": 8
+            },
+            {
+              "key": "sand",
+              "name": "沙块",
+              "color": "$TextColor",
+              "size": 8
+            },
+            {
+              "key": "stone",
+              "name": "圆石",
+              "color": "$TextColor",
+              "size": 8
+            },
+            {
+              "key": "iron",
+              "name": "精铁",
+              "color": "$TextColor",
+              "size": 8
+            },
+            {
+              "key": "emerald",
+              "name": "绿宝石",
+              "color": "$TextColor",
+              "size": 8
+            },
+            {
+              "key": "gold",
+              "name": "黄金",
+              "color": "$TextColor",
+              "size": 8
+            },
+            {
+              "key": "diamond",
+              "name": "钻石",
+              "color": "$TextColor",
+              "size": 8
+            },
+            {
+              "key": "purpur",
+              "name": "紫珀",
+              "color": "$TextColor",
+              "size": 8
+            },
+            {
+              "key": "bedrock",
+              "name": "基岩",
+              "color": "$TextColor",
+              "size": 8
+            }
+          ]
+        },
+        {
+          "type": "RadioGroup",
+          "key": "level",
+          "name": "等级",
+          "color": "$TextColor",
+          "size": 8,
+          "items": [
+            {
+              "key": "1",
+              "name": "Ⅰ",
+              "color": "$TextColor",
+              "size": 8
+            },
+            {
+              "key": "2",
+              "name": "Ⅱ",
+              "color": "$TextColor",
+              "size": 8
+            },
+            {
+              "key": "3",
+              "name": "Ⅲ",
+              "color": "$TextColor",
+              "size": 8
+            },
+            {
+              "key": "4",
+              "name": "Ⅳ",
+              "color": "$TextColor",
+              "size": 8
+            },
+            {
+              "key": "5",
+              "name": "Ⅴ",
+              "color": "$TextColor",
+              "size": 8
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,3 +1,8 @@
+/**
+ * @author: WhiteWallTeam
+ * @date: 2025.10.13
+ * @description: JavaScript 与 Native 交互的接口
+ */
 
 function StringToUTF8Bytes(str) {
     const utf8Bytes = [];

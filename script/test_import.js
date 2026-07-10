@@ -1,3 +1,8 @@
+/**
+ * @author: WhiteWallTeam
+ * @date: 2025.10.13
+ * @description: 导入模块测试用例
+ */
 
 const module = require('mojangson.js');
 

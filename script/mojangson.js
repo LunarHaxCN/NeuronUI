@@ -1,3 +1,9 @@
+/**
+ * @author: WhiteWallTeam
+ * @date: 2025.10.13
+ * @description: MojangSON parser for JavaScript
+ */
+
 export function parseMojangSON(input) {
 	input = input.trim();
 

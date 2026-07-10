@@ -173,7 +173,6 @@
                         },
                         "key": "5",
                         "tip": "Only For BJD"
-                },
-                {
-                        "type": "TextView",
-       
+                }
+        ]
+}

@@ -1220,6 +1220,240 @@
           "max": 1000.0
         }
       ]
+    },
+    {
+      "type": "Switch",
+      "name": "中国帽",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [5, 0, 5, 0],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "off": "close/NeuronOff_ChinaHat.png",
+        "on": "open/NeuronOn_ChinaHat.png",
+        "icon": "open/NeuronOn_ChinaHat.png"
+      },
+      "tag": "fun_china_hat",
+      "items": [
+        {
+          "type": "SeekBar",
+          "key": "size",
+          "format": "尺寸%.1f",
+          "color": "$TextColor",
+          "size": 8,
+          "padding": [0, 0, 0, 0],
+          "value": 0.6,
+          "min": 0.1,
+          "max": 1.0
+        },
+        {
+          "type": "CheckBox",
+          "key": "rainbow",
+          "name": "彩虹",
+          "color": "$TextColor",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "players",
+          "name": "所有玩家",
+          "color": "$TextColor",
+          "size": 8
+        },
+        {
+          "type": "ColorPicker",
+          "key": "color",
+          "name": "自定义颜色",
+          "size": 8,
+          "color": "$TextColor",
+          "padding": [10, 10, 10, 10],
+          "default_color": "#6FFFFF",
+          "ok": "确定",
+          "cancel": "取消"
+        }
+      ]
+    },
+    {
+      "type": "Switch",
+      "name": "落地波纹",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [5, 0, 5, 0],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "off": "close/NeuronOff_JumpCircles.png",
+        "on": "open/NeuronOn_JumpCircles.png",
+        "icon": "open/NeuronOn_JumpCircles.png"
+      },
+      "tag": "fun_jump_circles",
+      "items": [
+        {
+          "type": "SeekBar",
+          "key": "size",
+          "format": "尺寸%.2f",
+          "color": "$TextColor",
+          "size": 8,
+          "padding": [0, 0, 0, 0],
+          "value": 0.02,
+          "min": 0.01,
+          "max": 0.20
+        },
+        {
+          "type": "SeekBar",
+          "key": "time",
+          "format": "时长%dms",
+          "color": "$TextColor",
+          "size": 8,
+          "padding": [0, 0, 0, 0],
+          "value": 5000,
+          "min": 1000,
+          "max": 10000
+        },
+        {
+          "type": "SeekBar",
+          "key": "ring_count",
+          "format": "波纹数%d",
+          "color": "$TextColor",
+          "size": 8,
+          "padding": [0, 0, 0, 0],
+          "value": 1,
+          "min": 1,
+          "max": 32
+        },
+        {
+          "type": "CheckBox",
+          "key": "rainbow",
+          "name": "彩虹",
+          "color": "$TextColor",
+          "size": 8
+        },
+        {
+          "type": "ColorPicker",
+          "key": "color",
+          "name": "自定义颜色",
+          "size": 8,
+          "color": "$TextColor",
+          "padding": [10, 10, 10, 10],
+          "default_color": "#6FFFFF",
+          "ok": "确定",
+          "cancel": "取消"
+        }
+      ]
+    },
+    {
+      "type": "Switch",
+      "name": "自定义雾颜色",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [5, 0, 5, 0],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "off": "close/NeuronOff_FogColor.png",
+        "on": "open/NeuronOn_FogColor.png",
+        "icon": "open/NeuronOn_FogColor.png"
+      },
+      "tag": "fun_fog_color",
+      "items": [
+        {
+          "type": "CheckBox",
+          "key": "rainbow",
+          "name": "彩虹",
+          "color": "$TextColor",
+          "size": 8,
+          "checked": true
+        },
+        {
+          "type": "ColorPicker",
+          "key": "color",
+          "name": "自定义颜色",
+          "size": 8,
+          "color": "$TextColor",
+          "padding": [10, 10, 10, 10],
+          "default_color": "#FFFFFF",
+          "ok": "确定",
+          "cancel": "取消"
+        }
+      ]
+    },
+    {
+      "type": "Switch",
+      "name": "自定义实体颜色",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [5, 0, 5, 0],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "off": "close/NeuronOff_MobColor.png",
+        "on": "open/NeuronOn_MobColor.png",
+        "icon": "open/NeuronOn_MobColor.png"
+      },
+      "tag": "fun_mob_color",
+      "items": [
+        {
+          "type": "CheckBox",
+          "key": "rainbow",
+          "name": "彩虹",
+          "color": "$TextColor",
+          "size": 8,
+          "checked": true
+        },
+        {
+          "type": "ColorPicker",
+          "key": "color",
+          "name": "自定义颜色",
+          "size": 8,
+          "color": "$TextColor",
+          "padding": [10, 10, 10, 10],
+          "default_color": "#FFFFFF",
+          "ok": "确定",
+          "cancel": "取消"
+        }
+      ]
+    },
+    {
+      "type": "Switch",
+      "name": "自定义受击颜色",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [5, 0, 5, 0],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "off": "close/NeuronOff_HurtColor.png",
+        "on": "open/NeuronOn_HurtColor.png",
+        "icon": "open/NeuronOn_HurtColor.png"
+      },
+      "tag": "fun_hurt_color",
+      "items": [
+        {
+          "type": "CheckBox",
+          "key": "rainbow",
+          "name": "彩虹",
+          "color": "$TextColor",
+          "size": 8,
+          "checked": true
+        },
+        {
+          "type": "ColorPicker",
+          "key": "color",
+          "name": "自定义颜色",
+          "size": 8,
+          "color": "$TextColor",
+          "padding": [10, 10, 10, 10],
+          "default_color": "#FFFFFF",
+          "ok": "确定",
+          "cancel": "取消"
+        }
+      ]
     }
   ]
 }

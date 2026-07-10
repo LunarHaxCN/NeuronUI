@@ -1,6 +1,6 @@
 /**
  * @author: WhiteWallTeam
- * @date: 2024.10.12
+ * @date: 2025.07.27
  * @description: 建筑工具
  */
 
@@ -16,10 +16,16 @@ const Config = {
     SAVE_TICK: 0,
 };
 
-File.mkdirs(Config.DATA_PATH);
+try {
+    if (!File.exist(Config.DATA_PATH)) {
+        File.mkdirs(Config.DATA_PATH);
+    }
+} catch (error) {
+    clientMessage(`Failed to create data directory: ${error}`);
+}
 
 function onCallModuleEvent(args) {
-    const { fun, value } = args;
+    const {fun, value} = args;
 
     if (fun === 'script_build_tool' && isInGame()) {
         Config.MODULE_BUILD_TOOL = value;
@@ -106,13 +112,13 @@ function showListMenu() {
 
     // 如果没有文件，添加“暂无数据”按钮
     if (!files || files.length === 0) {
-        menu.buttons.push({ text: '暂无数据' });
+        menu.buttons.push({text: '暂无数据'});
     } else {
         // 处理每个文件
         files.forEach(file => {
             menu.buttons.push({
                 text: file.name.replace('.json', ''),
-                image: { type: 'path', data: 'textures/ui/default_world.png' }
+                image: {type: 'path', data: 'textures/ui/default_world.png'}
             });
         });
     }
@@ -139,12 +145,12 @@ function showRemoveListMenu() {
 
     // 检查是否存在文件，否则显示“暂无数据”按钮
     if (!files || files.length === 0) {
-        menu.buttons.push({ text: '暂无数据' });
+        menu.buttons.push({text: '暂无数据'});
     } else {
         files.forEach(file => {
             menu.buttons.push({
                 text: file.name.replace('.json', ''),
-                image: { type: 'path', data: 'textures/ui/default_world.png' }
+                image: {type: 'path', data: 'textures/ui/default_world.png'}
             });
         });
     }
@@ -363,17 +369,22 @@ function onTickEvent() {
             const {x, y, z, name, aux} = task;
             const {x: baseX, y: baseY, z: baseZ} = Config.POS_DATA;
             const command = `setblock ${baseX + x} ${baseY + y} ${baseZ + z} ${name} ${aux}`;
-            executeCommand(command);
+            requestExecuteCommand(command, function (result) {
+                //{"type":"AllOutput","successCount":0,"hasPlayerText":false,"messages":[{"type":"Error","messageId":"commands.generic.disabled","params":[]}]}
+                //{"type":"AllOutput","successCount":1,"hasPlayerText":false,"messages":[{"type":"Success","messageId":"commands.setblock.success","params":[]}]}
+                if (result.messages && result.messages.length > 0) {
+                    const message = result.messages[0];
+                    if (message.type === 'Error' && message.messageId === 'commands.generic.disabled') {
+                        clientMessage('§c服务器禁止执行此命令，请检查服务器设置');
+                    }
+                    if (message.type === 'Success' && message.messageId === 'commands.setblock.success') {
+                        ;
+                    }
+                }
+            });
         } else {
             break;
         }
     }
     showTipMessage(`§e当前任务剩余: ${Config.BUILD_TASKS.length}`);
-}
-
-function onCommandOutputEvent(type, args, value) {
-    if (!Config.MODULE_BUILD_TOOL) {
-        return false;
-    }
-    return Config.BUILD_TASKS.length > 0;
 }

@@ -1039,6 +1039,83 @@
           "checked": true
         }
       ]
+    },
+    {
+      "type": "Switch",
+      "name": "发包挖掘",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [5, 0, 5, 0],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "off": "close/NeuronOff_PacketMine.png",
+        "on": "open/NeuronOn_PacketMine.png",
+        "icon": "open/NeuronOn_PacketMine.png"
+      },
+      "tag": "fun_packet_mine",
+      "items": [
+        {
+          "type": "SeekBar",
+          "key": "count",
+          "format": "每次发包%d",
+          "color": "$TextColor",
+          "size": 8,
+          "padding": [0, 0, 0, 0],
+          "value": 10,
+          "min": 1,
+          "max": 30
+        }
+      ]
+    },
+    {
+      "type": "Switch",
+      "name": "相机穿墙",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [5, 0, 5, 0],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "off": "close/NeuronOff_NoCameraClip.png",
+        "on": "open/NeuronOn_NoCameraClip.png",
+        "icon": "open/NeuronOn_NoCameraClip.png"
+      },
+      "tag": "fun_no_camera_clip"
+    },
+    {
+      "type": "Switch",
+      "name": "无受伤抖动",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [5, 0, 5, 0],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "off": "close/NeuronOff_NoHurtCamera.png",
+        "on": "open/NeuronOn_NoHurtCamera.png",
+        "icon": "open/NeuronOn_NoHurtCamera.png"
+      },
+      "tag": "fun_no_hurt_camera"
+    },
+    {
+      "type": "Switch",
+      "name": "无限投射",
+      "color": "$TextColor",
+      "size": 12,
+      "padding": [5, 0, 5, 0],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [65, 65],
+        "no_circle": true,
+        "off": "close/NeuronOff_InfiniteThrow.png",
+        "on": "open/NeuronOn_InfiniteThrow.png",
+        "icon": "open/NeuronOn_InfiniteThrow.png"
+      },
+      "tag": "fun_infinite_throw"
     }
   ]
 }

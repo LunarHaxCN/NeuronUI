@@ -1,0 +1,6 @@
+{
+  "name": "Java插件",
+  "description": "正在试验阶段的即时编译Java插件\n暂时没有接入任何API",
+  "entry": "JavaPlugin",
+  "enable": false
+}

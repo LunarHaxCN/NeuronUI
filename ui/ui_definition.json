@@ -22,6 +22,7 @@
     ],
     "script": [
     "base_script.js",
-    "build_tool.js"
+    "build_tool.js",
+    "py_executor.js"
     ]
 }
