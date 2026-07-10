@@ -1,10 +1,10 @@
-{
+﻿{
   "type": "Menu",
   "title": {
     "name": "『Auxiliary』",
     "size": 15,
-    "elevation": 4,
-    "background": "$TitleBG",
+    "elevation": 3,
+    "background": "$menu_title_background_color",
     "padding": [
       4,
       4,
@@ -12,12 +12,12 @@
       4
     ],
     "colors": [
-      "$TitleColor",
-      "$TitleColor"
+      "$menu_title_gradient_text_begin_color",
+      "$menu_title_gradient_text_end_color"
     ],
     "margins": [0, 0, 0, 0]
   },
-  "color": "$MenuColor",
+  "color": "$menu_color",
   "alpha": 0.85,
   "can_close": true,
   "hide": true,
@@ -29,7 +29,7 @@
     {
       "type": "Switch",
       "name": "无蛛网/细雪减速",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -50,7 +50,7 @@
     {
       "type": "Switch",
       "name": "使用物品不减速",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -71,7 +71,7 @@
     {
       "type": "Switch",
       "name": "快速建造",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -93,13 +93,13 @@
           "type": "RadioGroup",
           "key": "mode",
           "name": "建造模式",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "items": [
             {
               "key": "fill",
               "name": "填充",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "checked": true,
               "size": 8,
               "tip": "点击的两个方块位置会作为起点和终点"
@@ -107,42 +107,42 @@
             {
               "key": "frame",
               "name": "框架",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8,
               "tip": "点击的两个方块位置会作为起点和终点"
             },
             {
               "key": "hollow",
               "name": "空心",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8,
               "tip": "点击的两个方块位置会作为起点和终点"
             },
             {
               "key": "pellet",
               "name": "圆球",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8,
               "tip": "点击的位置会作为起点"
             },
             {
               "key": "cylinder",
               "name": "圆柱",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8,
               "tip": "点击的位置会作为起点"
             },
             {
               "key": "cone",
               "name": "圆锥",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8,
               "tip": "点击的位置会作为起点"
             },
             {
               "key": "destroy",
               "name": "破坏",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8,
               "tip": "点击的两个方块位置会作为起点和终点"
             }
@@ -152,7 +152,7 @@
           "type": "SeekBar",
           "key": "radius",
           "format": "圆半径%d",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -168,7 +168,7 @@
           "type": "SeekBar",
           "key": "height",
           "format": "圆高度%d",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -184,7 +184,7 @@
           "type": "CheckBox",
           "key": "solid",
           "name": "圆实心",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "tip": "设置圆是否为实心体"
         },
@@ -192,7 +192,7 @@
           "type": "SeekBar",
           "key": "distance",
           "format": "操作距离%.2f",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -208,7 +208,7 @@
           "type": "CheckBox",
           "key": "retry",
           "name": "失败重试",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "checked": true,
           "tip": "当放置/破坏时操作失败会尝试重新放置/破坏"
@@ -217,7 +217,7 @@
           "type": "CheckBox",
           "key": "line_box",
           "name": "边界线盒",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "checked": true,
           "tip": "在操作的区域边界线盒"
@@ -226,7 +226,7 @@
           "type": "CheckBox",
           "key": "pick",
           "name": "方块/生物选择",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "tip": "点击方块/生物会获取对应的物品和刷怪蛋（必须先为创造模式）"
         }
@@ -235,7 +235,7 @@
     {
       "type": "Switch",
       "name": "自动钓鱼",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -257,7 +257,7 @@
           "type": "SeekBar",
           "key": "delay",
           "format": "抛竿延迟%d",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -274,7 +274,7 @@
     {
       "type": "Switch",
       "name": "背包移动",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -296,13 +296,13 @@
           "type": "CheckBox",
           "key": "swap",
           "name": "交换模式",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "TextView",
           "name": "合成栏左上格",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 12,
           "padding": [
             10,
@@ -315,7 +315,7 @@
         {
           "type": "TextView",
           "name": "合成栏右上格",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 12,
           "padding": [
             10,
@@ -328,7 +328,7 @@
         {
           "type": "TextView",
           "name": "合成栏左下格",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 12,
           "padding": [
             10,
@@ -341,7 +341,7 @@
         {
           "type": "TextView",
           "name": "合成栏右下格",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 12,
           "padding": [
             10,
@@ -354,7 +354,7 @@
         {
           "type": "TextView",
           "name": "光标格",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 12,
           "padding": [
             10,
@@ -369,7 +369,7 @@
     {
       "type": "Switch",
       "name": "音频控制",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -392,7 +392,7 @@
           "type": "TextView",
           "key": "edit_id",
           "name": "编辑音频ID",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 12,
           "padding": [
             5,
@@ -405,14 +405,14 @@
           "type": "Switch",
           "key": "random",
           "name": "随机ID",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 12
         },
         {
           "type": "Switch",
           "key": "record",
           "name": "录制音频",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 12,
           "on": "录制来自服务器的音效。录制时请勿打开播放"
         },
@@ -420,7 +420,7 @@
           "type": "Switch",
           "key": "play_record",
           "name": "播放录制",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 12,
           "on": "播放录制的音频。播放时请勿打开录制"
         },
@@ -428,26 +428,26 @@
           "type": "RadioGroup",
           "key": "mode",
           "name": "播放对象",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "items": [
             {
               "key": "local",
               "name": "自身位置",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8,
               "checked": true
             },
             {
               "key": "player",
               "name": "所有玩家",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             },
             {
               "key": "entity",
               "name": "所有实体",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             }
           ]
@@ -456,7 +456,7 @@
           "type": "TextView",
           "key": "save",
           "name": "保存音频数据",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 12,
           "padding": [
             5,
@@ -469,7 +469,7 @@
           "type": "TextView",
           "key": "load",
           "name": "加载音频数据",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 12,
           "padding": [
             5,
@@ -483,7 +483,7 @@
     {
       "type": "Switch",
       "name": "建筑工具",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         10,
@@ -504,7 +504,7 @@
     {
       "type": "TextView",
       "name": "进入本地游戏",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         10,
@@ -523,7 +523,7 @@
     {
       "type": "TextView",
       "name": "创建本地世界",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         10,
@@ -542,7 +542,7 @@
     {
       "type": "Switch",
       "name": "自动切换工具",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [5, 0, 5, 0],
       "shortcut": {
@@ -558,7 +558,7 @@
     {
       "type": "TextView",
       "name": "租赁服密码爆破",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [8, 8, 8, 8],
       "shortcut": {
@@ -572,7 +572,7 @@
     {
       "type": "Switch",
       "name": "联机假名",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [5, 0, 5, 0],
       "shortcut": {
@@ -589,7 +589,7 @@
           "type": "EditText",
           "name": "名称",
           "key": "content",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "max_lines": 1,
           "register_setting": "fake_name_save"
         },
@@ -597,7 +597,7 @@
           "type": "CheckBox",
           "key": "packet",
           "name": "数据包模式",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         }
       ]
@@ -605,7 +605,7 @@
     {
       "type": "Switch",
       "name": "自定义等级标识",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [5, 0, 5, 0],
       "shortcut": {
@@ -622,67 +622,67 @@
           "type": "RadioGroup",
           "key": "type",
           "name": "标识",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "items": [
             {
               "key": "wood",
               "name": "橡木",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             },
             {
               "key": "albizia",
               "name": "合欢木",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             },
             {
               "key": "sand",
               "name": "沙块",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             },
             {
               "key": "stone",
               "name": "圆石",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             },
             {
               "key": "iron",
               "name": "精铁",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             },
             {
               "key": "emerald",
               "name": "绿宝石",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             },
             {
               "key": "gold",
               "name": "黄金",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             },
             {
               "key": "diamond",
               "name": "钻石",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             },
             {
               "key": "purpur",
               "name": "紫珀",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             },
             {
               "key": "bedrock",
               "name": "基岩",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             }
           ]
@@ -691,37 +691,37 @@
           "type": "RadioGroup",
           "key": "level",
           "name": "等级",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "items": [
             {
               "key": "1",
               "name": "Ⅰ",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             },
             {
               "key": "2",
               "name": "Ⅱ",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             },
             {
               "key": "3",
               "name": "Ⅲ",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             },
             {
               "key": "4",
               "name": "Ⅳ",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             },
             {
               "key": "5",
               "name": "Ⅴ",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             }
           ]

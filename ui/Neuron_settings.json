@@ -1,10 +1,10 @@
-{
+﻿{
   "type": "Menu",
   "title": {
     "name": "『Settings』",
     "size": 15,
-    "elevation": 4,
-    "background": "$TitleBG",
+    "elevation": 3,
+    "background": "$menu_title_background_color",
     "padding": [
       4,
       4,
@@ -12,12 +12,12 @@
       4
     ],
     "colors": [
-      "$TitleColor",
-      "$TitleColor"
+      "$menu_title_gradient_text_begin_color",
+      "$menu_title_gradient_text_end_color"
     ],
     "margins": [0, 0, 0, 0]
   },
-  "color": "$MenuColor",
+  "color": "$menu_color",
   "alpha": 0.85,
   "can_close": true,
   "hide": true,
@@ -29,7 +29,7 @@
     {
       "type": "Switch",
       "name": "显示水印",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -52,7 +52,7 @@
           "type": "SeekBar",
           "key": "rotation",
           "format": "旋转角度%.2f",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [0, 0, 0, 0],
           "value": -30.0,
@@ -63,7 +63,7 @@
           "type": "SeekBar",
           "key": "size",
           "format": "文本大小%.2f",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [0, 0, 0, 0],
           "value": 70.0,
@@ -74,7 +74,7 @@
           "type": "SeekBar",
           "key": "alpha",
           "format": "透明度%d",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [0, 0, 0, 0],
           "value": 76,
@@ -86,7 +86,7 @@
           "key": "color",
           "name": "自定义颜色",
           "size": 8,
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "padding": [10, 10, 10, 10],
           "default_color": -65281,
           "ok": "确定",
@@ -97,7 +97,7 @@
     {
       "type": "Switch",
       "name": "加入游戏自动复制地址",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -118,7 +118,7 @@
     {
       "type": "Switch",
       "name": "悬浮窗口半屏显示",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -132,7 +132,7 @@
     {
       "type": "Switch",
       "name": "隐藏菜单快捷按钮(长按)",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -153,7 +153,7 @@
     {
       "type": "TextView",
       "name": "关于",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -166,7 +166,7 @@
     {
       "type": "TextView",
       "name": "删除游戏数据",
-      "color": "$ItemSet",
+      "color": "$menu_item_set_color",
       "size": 12,
       "padding": [
         5,
@@ -185,7 +185,7 @@
     {
       "type": "TextView",
       "name": "删除用户数据",
-      "color": "$ItemSet",
+      "color": "$menu_item_set_color",
       "size": 12,
       "padding": [
         5,
@@ -204,7 +204,7 @@
     {
       "type": "TextView",
       "name": "删除下载包缓存",
-      "color": "$ItemSet",
+      "color": "$menu_item_set_color",
       "size": 12,
       "padding": [
         5,
@@ -223,7 +223,7 @@
     {
       "type": "TextView",
       "name": "退出游戏登录",
-      "color": "$ItemSet",
+      "color": "$menu_item_set_color",
       "size": 12,
       "padding": [
         5,
@@ -242,7 +242,7 @@
     {
       "type": "TextView",
       "name": "RN显示",
-      "color": "$ItemSet",
+      "color": "$menu_item_set_color",
       "size": 12,
       "padding": [
         5,
@@ -261,7 +261,7 @@
     {
       "type": "TextView",
       "name": "RN隐藏",
-      "color": "$ItemSet",
+      "color": "$menu_item_set_color",
       "size": 12,
       "padding": [
         5,
@@ -280,7 +280,7 @@
     {
       "type": "TextView",
       "name": "RN开启",
-      "color": "$ItemSet",
+      "color": "$menu_item_set_color",
       "size": 12,
       "padding": [
         5,
@@ -299,7 +299,7 @@
     {
       "type": "TextView",
       "name": "RN关闭",
-      "color": "$ItemSet",
+      "color": "$menu_item_set_color",
       "size": 12,
       "padding": [
         5,
@@ -318,7 +318,7 @@
     {
       "type": "TextView",
       "name": "显示开发配置窗口",
-      "color": "$ItemSet",
+      "color": "$menu_item_set_color",
       "size": 12,
       "padding": [
         5,
@@ -337,7 +337,7 @@
     {
       "type": "TextView",
       "name": "MCPDecrypt",
-      "color": "$ItemSet",
+      "color": "$menu_item_set_color",
       "size": 12,
       "padding": [
         5,
@@ -356,7 +356,7 @@
     {
       "type": "Switch",
       "name": "RN Debug",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -377,7 +377,7 @@
     {
       "type": "TextView",
       "name": "Debug",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -390,7 +390,7 @@
     {
       "type": "TextView",
       "name": "保存全部配置",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [5, 5, 5, 5],
       "shortcut": {
@@ -404,7 +404,7 @@
     {
       "type": "TextView",
       "name": "加载全部配置",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [5, 5, 5, 5],
       "shortcut": {

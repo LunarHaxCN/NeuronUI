@@ -2,6 +2,8 @@
 
 # 2026.7.10  Amore
 - Support RunAway 7.10.3
+- Full migration to 7.10.3 variable naming system ($TextColor→$menu_item_color etc.)
+- Fixed menu structure compatibility (elevation, colors)
 - Added shortcuts
   - Player  [Packet Mine] (PacketMine)
   - Player  [No Camera Clip] (NoCameraClip)
@@ -16,13 +18,14 @@
   - Auxiliary  [Auto Tool] (AutoTool)
   - Auxiliary  [Fake Name] (FakeName)
   - Auxiliary  [Custom Growth Level] (CustomGrowthLevel)
-  - Auxiliary  [Client Manager] (ClientManager)
+  - Auxiliary  [Rental Pwd Crack] (RentalPwdCrack)
   - Settings  [Save Config] (SaveMenusConfig)
   - Settings  [Load Config] (LoadMenusConfig)
 - New scripts: lib_rpc.js, nbt.js, py_executor.js, test_crypto.js, test_ws.js, test_shape.js
 - New directories: plugins/, resource_packs/, sound_manager/, sounds/
-- Updated conf_enchant.json: added Wind Burst, Density, Breach with icons
-- Updated conf_packet.json
+- Updated conf_enchant.json: added Wind Burst, Density, Breach with icons, reordered
+- Rewrote conf_packet.json: 209 packet IDs
+- Rewrote README.md, AGENTS.md, changelogs
 - Updated conf_item_editor.json
 
 # 2025.7.16  Methadone

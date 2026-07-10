@@ -1,10 +1,10 @@
-{
+﻿{
         "type": "Menu",
         "title": {
                 "name": "『Loophole』",
                 "size": 15,
-                "elevation": 4,
-                "background": "$TitleBG",
+                "elevation": 3,
+                "background": "$menu_title_background_color",
                 "padding": [
                         4,
                         4,
@@ -12,8 +12,8 @@
                         4
                 ],
                 "colors": [
-                        "$TitleColor",
-                        "$TitleColor"
+                        "$menu_title_gradient_text_begin_color",
+                        "$menu_title_gradient_text_end_color"
                 ],
                 "margins": [
                         0,
@@ -22,7 +22,7 @@
                         0
                 ]
         },
-        "color": "$MenuColor",
+        "color": "$menu_color",
         "alpha": 0.85,
         "can_close": true,
         "hide": true,
@@ -39,7 +39,7 @@
                 {
                         "type": "Switch",
                         "name": "崩溃服务器",
-                        "color": "$TextColor",
+                        "color": "$menu_item_color",
                         "size": 12,
                         "padding": [
                                 5,
@@ -64,35 +64,35 @@
                                         "type": "CheckBox",
                                         "key": "particle",
                                         "name": "粒子爆炸",
-                                        "color": "$TextColor",
+                                        "color": "$menu_item_color",
                                         "size": 12
                                 },
                                 {
                                         "type": "CheckBox",
                                         "key": "multipleRpc",
                                         "name": "多发RPC",
-                                        "color": "$TextColor",
+                                        "color": "$menu_item_color",
                                         "size": 12
                                 },
                                 {
                                         "type": "CheckBox",
                                         "key": "forwardRpc",
                                         "name": "转发RPC",
-                                        "color": "$TextColor",
+                                        "color": "$menu_item_color",
                                         "size": 12
                                 },
                                 {
                                         "type": "CheckBox",
                                         "key": "antiPacket",
                                         "name": "反数据包攻击",
-                                        "color": "$TextColor",
+                                        "color": "$menu_item_color",
                                         "size": 12
                                 },
                                 {
                                         "type": "SeekBar",
                                         "key": "count",
                                         "format": "数据包%d个",
-                                        "color": "$TextColor",
+                                        "color": "$menu_item_color",
                                         "size": 8,
                                         "padding": [
                                                 0,
@@ -109,7 +109,7 @@
                 {
                         "type": "TextView",
                         "name": "NBT编辑器",
-                        "color": "$TextColor",
+                        "color": "$menu_item_color",
                         "size": 12,
                         "padding": [
                                 8,
@@ -131,7 +131,7 @@
                 {
                         "type": "TextView",
                         "name": "花雨庭商店",
-                        "color": "$TextColor",
+                        "color": "$menu_item_color",
                         "size": 12,
                         "padding": [
                                 8,
@@ -154,7 +154,7 @@
                 {
                         "type": "TextView",
                         "name": "BJD Shop(无效)",
-                        "color": "$TextColor",
+                        "color": "$menu_item_color",
                         "size": 12,
                         "padding": [
                                 10,

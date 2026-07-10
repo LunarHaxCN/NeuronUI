@@ -1,10 +1,10 @@
-{
+﻿{
   "type": "Menu",
   "title": {
     "name": "『Player』",
     "size": 15,
-    "elevation": 4,
-    "background": "$TitleBG",
+    "elevation": 3,
+    "background": "$menu_title_background_color",
     "padding": [
       4,
       4,
@@ -12,12 +12,12 @@
       4
     ],
     "colors": [
-      "$TitleColor",
-      "$TitleColor"
+      "$menu_title_gradient_text_begin_color",
+      "$menu_title_gradient_text_end_color"
     ],
     "margins": [0, 0, 0, 0]
   },
-  "color": "$MenuColor",
+  "color": "$menu_color",
   "alpha": 0.85,
   "can_close": true,
   "hide": true,
@@ -29,7 +29,7 @@
     {
       "type": "RadioGroup",
       "name": "游戏模式",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -42,25 +42,25 @@
         {
           "key": "survival",
           "name": "生存",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "key": "create",
           "name": "创造",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "key": "adventure",
           "name": "冒险",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "key": "spectator",
           "name": "观察者",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         }
       ]
@@ -68,7 +68,7 @@
     {
       "type": "Switch",
       "name": "游戏速度",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -90,7 +90,7 @@
           "type": "SeekBar",
           "key": "speed",
           "format": "速度%.2f",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -107,7 +107,7 @@
     {
       "type": "Switch",
       "name": "能力",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -129,119 +129,119 @@
           "type": "CheckBox",
           "key": "build",
           "name": "建造方块",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "mine",
           "name": "采集方块",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "doorsandswitches",
           "name": "使用门和开关",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "opencontainers",
           "name": "打开容器",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "attackplayers",
           "name": "攻击玩家",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "attackmobs",
           "name": "攻击生物",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "op",
           "name": "操作员",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "teleport",
           "name": "使用传送",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "invulnerable",
           "name": "无敌",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "mayfly",
           "name": "可飞行",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "flying",
           "name": "飞行状态",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "noclip",
           "name": "穿墙",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "instabuild",
           "name": "瞬间破坏方块",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "lightning",
           "name": "闪电等级",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "mute",
           "name": "是否被禁言",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "worldbuilder",
           "name": "世界建设者",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "SeekBar",
           "key": "flySpeed",
           "format": "飞行速度%.2f",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -257,7 +257,7 @@
           "type": "SeekBar",
           "key": "walkSpeed",
           "format": "步行速度%.2f",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -273,7 +273,7 @@
           "type": "CheckBox",
           "key": "elytra_fly",
           "name": "鞘翅飞行",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "on": "穿上鞘翅，离开地面进入飞行模式(建议先打开飞行状态)"
         },
@@ -281,7 +281,7 @@
           "type": "CheckBox",
           "key": "fake_fly",
           "name": "伪飞行",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         }
       ]
@@ -289,7 +289,7 @@
     {
       "type": "Switch",
       "name": "自动开箱",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -311,7 +311,7 @@
           "type": "SeekBar",
           "key": "distance",
           "format": "距离%.2f",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -327,7 +327,7 @@
           "type": "CheckBox",
           "key": "ignore_screen",
           "name": "忽略容器屏幕",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         }
       ]
@@ -335,7 +335,7 @@
     {
       "type": "Switch",
       "name": "快速拿物",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -357,14 +357,14 @@
           "type": "CheckBox",
           "key": "auto_close",
           "name": "自动关闭",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "SeekBar",
           "key": "delay",
           "format": "延时%d",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -381,7 +381,7 @@
     {
       "type": "Switch",
       "name": "自动破坏方块",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -403,35 +403,35 @@
           "type": "CheckBox",
           "key": "minecraft:cake",
           "name": "蛋糕",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "minecraft:bed",
           "name": "床",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "minecraft:diamond_ore",
           "name": "钻石矿",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "minecraft:ancient_debris",
           "name": "远古残骸",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "SeekBar",
           "key": "distance",
           "format": "距离%.2f",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -447,20 +447,20 @@
           "type": "RadioGroup",
           "key": "packet_mode",
           "name": "发包模式",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "items": [
             {
               "key": "vanilla",
               "name": "原版",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8,
               "checked": true
             },
             {
               "key": "nukkit",
               "name": "Nukkit",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             }
           ]
@@ -470,7 +470,7 @@
     {
       "type": "Switch",
       "name": "自动点击",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -492,7 +492,7 @@
           "type": "SeekBar",
           "key": "delay",
           "format": "操作延迟%d",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -509,7 +509,7 @@
     {
       "type": "Switch",
       "name": "点击破坏",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -531,27 +531,27 @@
           "type": "RadioGroup",
           "key": "mode",
           "name": "破坏模式",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "items": [
             {
               "key": "line",
               "name": "线性",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8,
               "tip": "在点击位置竖一字型破坏"
             },
             {
               "key": "cross",
               "name": "十字",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8,
               "tip": "在点击位置竖十字型破坏"
             },
             {
               "key": "matrix",
               "name": "矩阵",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "checked": true,
               "size": 8,
               "tip": "在点击位置10*10矩阵破坏"
@@ -562,20 +562,20 @@
           "type": "RadioGroup",
           "key": "packet_mode",
           "name": "发包模式",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "items": [
             {
               "key": "vanilla",
               "name": "原版",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8,
               "checked": true
             },
             {
               "key": "nukkit",
               "name": "Nukkit",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8
             }
           ]
@@ -585,7 +585,7 @@
     {
       "type": "Switch",
       "name": "连锁挖掘",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -607,7 +607,7 @@
           "type": "SeekBar",
           "key": "distance",
           "format": "破坏半径%.2f",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -623,7 +623,7 @@
           "type": "SeekBar",
           "key": "search_distance",
           "format": "搜索半径%.2f",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -640,7 +640,7 @@
     {
       "type": "Switch",
       "name": "方块操作距离",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [5, 0, 5, 0],
       "tag": "fun_extended_block_reach",
@@ -657,7 +657,7 @@
           "type": "SeekBar",
           "key": "reach",
           "format": "距离 %.2f",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [0, 0, 0, 0],
           "value": 7.0,
@@ -669,7 +669,7 @@
     {
       "type": "Switch",
       "name": "自动图腾",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -690,7 +690,7 @@
     {
       "type": "Switch",
       "name": "无摔落伤害",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -712,7 +712,7 @@
           "type": "SeekBar",
           "key": "speed",
           "format": "下落速度%.2f",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -728,49 +728,49 @@
           "type": "CheckBox",
           "key": "vanilla",
           "name": "Vanilla",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "mine_plex",
           "name": "MinePlex",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "cube_craft",
           "name": "CubeCraft",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "nukkit",
           "name": "Nukkit",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "auth_ground_pos",
           "name": "AuthGroundPos",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "no_move_check",
           "name": "绕过移动检查",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "CheckBox",
           "key": "no_fall_check",
           "name": "绕过摔落检查",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         }
       ]
@@ -778,7 +778,7 @@
     {
       "type": "Switch",
       "name": "无火焰附加",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -799,7 +799,7 @@
     {
       "type": "Switch",
       "name": "自动穿装",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -820,7 +820,7 @@
     {
       "type": "Switch",
       "name": "放大镜",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -842,7 +842,7 @@
           "type": "SeekBar",
           "key": "fov",
           "format": "视角%.2f",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -858,7 +858,7 @@
           "type": "SeekBar",
           "key": "modifier",
           "format": "附加值%.2f",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -875,7 +875,7 @@
     {
       "type": "Switch",
       "name": "自动吃物",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -897,14 +897,14 @@
           "type": "CheckBox",
           "key": "fast_eat",
           "name": "快速食用",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8
         },
         {
           "type": "SeekBar",
           "key": "health",
           "format": "生命值低于%.2f自动吃金苹果/附魔金苹果",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [
             0,
@@ -921,7 +921,7 @@
     {
       "type": "Switch",
       "name": "麒麟臂",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -942,7 +942,7 @@
     {
       "type": "Switch",
       "name": "自动破坏",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -964,27 +964,27 @@
           "type": "RadioGroup",
           "key": "mode",
           "name": "破坏模式",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "items": [
             {
               "key": "line",
               "name": "线性",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8,
               "tip": "在自身位置竖一字型破坏"
             },
             {
               "key": "cross",
               "name": "十字",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "size": 8,
               "tip": "在自身位置竖十字型破坏"
             },
             {
               "key": "matrix",
               "name": "矩阵",
-              "color": "$TextColor",
+              "color": "$menu_item_color",
               "checked": true,
               "size": 8,
               "tip": "在自身位置10*10矩阵破坏"
@@ -996,7 +996,7 @@
     {
       "type": "Switch",
       "name": "单人无敌",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         5,
@@ -1018,7 +1018,7 @@
           "type": "CheckBox",
           "key": "attack_hurt",
           "name": "攻击伤害",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "checked": true
         },
@@ -1026,7 +1026,7 @@
           "type": "CheckBox",
           "key": "effect_hurt",
           "name": "药水伤害",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "checked": true
         },
@@ -1034,7 +1034,7 @@
           "type": "CheckBox",
           "key": "forced_hurt",
           "name": "强制伤害",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "checked": true
         }
@@ -1043,7 +1043,7 @@
     {
       "type": "Switch",
       "name": "发包挖掘",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [5, 0, 5, 0],
       "shortcut": {
@@ -1060,7 +1060,7 @@
           "type": "SeekBar",
           "key": "count",
           "format": "每次发包%d",
-          "color": "$TextColor",
+          "color": "$menu_item_color",
           "size": 8,
           "padding": [0, 0, 0, 0],
           "value": 10,
@@ -1072,7 +1072,7 @@
     {
       "type": "Switch",
       "name": "相机穿墙",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [5, 0, 5, 0],
       "shortcut": {
@@ -1088,7 +1088,7 @@
     {
       "type": "Switch",
       "name": "无受伤抖动",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [5, 0, 5, 0],
       "shortcut": {
@@ -1104,7 +1104,7 @@
     {
       "type": "Switch",
       "name": "无限投射",
-      "color": "$TextColor",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [5, 0, 5, 0],
       "shortcut": {

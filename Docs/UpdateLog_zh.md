@@ -2,6 +2,8 @@
 
 # 2026.7.10  Amore
 - 适配 7.10.3
+- 全面迁移 UI 变量命名至 7.10.3 新体系 ($TextColor→$menu_item_color 等)
+- 修复菜单结构属性兼容性 (elevation, colors 等)
 - 新增如下快捷键
   - Player  [发包挖掘] (PacketMine)
   - Player  [相机穿墙] (NoCameraClip)
@@ -16,13 +18,14 @@
   - Auxiliary  [自动切换工具] (AutoTool)
   - Auxiliary  [联机假名] (FakeName)
   - Auxiliary  [自定义等级标识] (CustomGrowthLevel)
-  - Auxiliary  [租赁服密码爆破] (ClientManager)
+  - Auxiliary  [租赁服密码爆破] (RentalPwdCrack)
   - Settings  [保存全部配置] (SaveMenusConfig)
   - Settings  [加载全部配置] (LoadMenusConfig)
 - 新增脚本 lib_rpc.js、nbt.js、py_executor.js、test_crypto.js、test_ws.js、test_shape.js
 - 新增目录 plugins/、resource_packs/、sound_manager/、sounds/
-- 更新 conf_enchant.json，新增风爆/致密/破甲附魔并补全图标路径
-- 完善 conf_packet.json
+- 更新 conf_enchant.json，新增风爆/致密/破甲附魔并补全图标路径，重排常用附魔到前
+- 完整重写 conf_packet.json，收录全部209条数据包ID
+- 重写 README.md、AGENTS.md、更新日志
 - 更新 conf_item_editor.json
 
 # 2025.7.16  Methadone

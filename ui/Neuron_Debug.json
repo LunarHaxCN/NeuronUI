@@ -1,10 +1,10 @@
-{
+﻿{
   "type": "Menu",
   "title": {
     "name": "『Debug』",
     "size": 15,
-    "elevation": 4,
-    "background": "$TitleBG",
+    "elevation": 3,
+    "background": "$menu_title_background_color",
     "padding": [
       4,
       4,
@@ -12,12 +12,12 @@
       4
     ],
     "colors": [
-      "$TitleColor",
-      "$TitleColor"
+      "$menu_title_gradient_text_begin_color",
+      "$menu_title_gradient_text_end_color"
     ],
     "margins": [0, 0, 0, 0]
   },
-  "color": "$MenuColor",
+  "color": "$menu_color",
   "alpha": 0.85,
   "can_close": true,
   "hide": true,
@@ -29,7 +29,7 @@
     {
       "type": "TextView",
       "name": "PyExecutor",
-      "color": "$TextColorr",
+      "color": "$menu_item_color",
       "size": 12,
       "padding": [
         8,
