@@ -1,9 +1,21 @@
 # NeuronUI 更新日志
 
+# 2026.7.10  Amore-Fix
+- 全面迁移 UI 变量命名至 7.10.3 新体系
+  - $TextColor → $menu_item_color
+  - $MenuColor → $menu_color
+  - $TitleBG → $menu_title_background_color
+  - $TitleColor → $menu_title_gradient_text_begin_color / _end_color
+  - $MenuHide → $menu_item_hide_color
+  - $ItemSet → $menu_item_set_color
+- 修复菜单结构属性兼容性
+  - elevation 调至 3
+  - 更新 colors 数组为渐变色双变量
+  - 移除 ui_definition.json 中 theme 字段
+  - 更新 ui_variables.json 为新变量体系
+
 # 2026.7.10  Amore
 - 适配 7.10.3
-- 全面迁移 UI 变量命名至 7.10.3 新体系 ($TextColor→$menu_item_color 等)
-- 修复菜单结构属性兼容性 (elevation, colors 等)
 - 新增如下快捷键
   - Player  [发包挖掘] (PacketMine)
   - Player  [相机穿墙] (NoCameraClip)

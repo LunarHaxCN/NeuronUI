@@ -1,9 +1,21 @@
 # NeuronUI Changelog
 
+# 2026.7.10  Amore-Fix
+- Full migration to 7.10.3 variable naming system
+  - $TextColor → $menu_item_color
+  - $MenuColor → $menu_color
+  - $TitleBG → $menu_title_background_color
+  - $TitleColor → $menu_title_gradient_text_begin_color / _end_color
+  - $MenuHide → $menu_item_hide_color
+  - $ItemSet → $menu_item_set_color
+- Fixed menu structure compatibility
+  - elevation adjusted to 3
+  - Updated colors array to gradient dual-variable
+  - Removed theme field from ui_definition.json
+  - Updated ui_variables.json to new variable system
+
 # 2026.7.10  Amore
 - Support RunAway 7.10.3
-- Full migration to 7.10.3 variable naming system ($TextColor→$menu_item_color etc.)
-- Fixed menu structure compatibility (elevation, colors)
 - Added shortcuts
   - Player  [Packet Mine] (PacketMine)
   - Player  [No Camera Clip] (NoCameraClip)
