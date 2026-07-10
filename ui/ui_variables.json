@@ -1,27 +1,17 @@
 {
-  "MenuColor" : "#D8BFD8",
-  "TitleBG": "#D8BFD8",
-  "TitleColor": [
+  "menu_color" : "#D8BFD8",
+  "menu_title_background_color": "#D8BFD8",
+  "menu_title_gradient_text_begin_color": [
     250,
     250,
     250
   ],
-  "TextColor" : "#00008B",
-  "MenuHide" : "#D32D2F",
-  "ItemSet" : "#9C27B0",
-  "menu_color" : "#FEFEFE",
-  "menu_title_background_color": "#8BC34A",
-  "menu_title_gradient_text_begin_color": [
-    255,
-    0,
-    0
-  ],
   "menu_title_gradient_text_end_color": [
-    0,
-    15,
-    15
+    250,
+    250,
+    250
   ],
-  "menu_item_color" : "#FF8800",
+  "menu_item_color" : "#00008B",
   "menu_item_hide_color" : "#D32D2F",
   "menu_item_set_color" : "#9C27B0"
 }
