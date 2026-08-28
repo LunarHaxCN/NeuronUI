@@ -1,178 +1,184 @@
-﻿{
-        "type": "Menu",
-        "title": {
-                "name": "『Loophole』",
-                "size": 15,
-                "elevation": 3,
-                "background": "$menu_title_background_color",
-                "padding": [
-                        4,
-                        4,
-                        4,
-                        4
-                ],
-                "colors": [
-                        "$menu_title_gradient_text_begin_color",
-                        "$menu_title_gradient_text_end_color"
-                ],
-                "margins": [
-                        0,
-                        0,
-                        0,
-                        0
-                ]
+{
+  "type": "Menu",
+  "title": {
+    "name": "『Loophole』",
+    "size": 15,
+    "elevation": 3,
+    "background": "$menu_title_background_color",
+    "padding": [
+      4,
+      4,
+      4,
+      4
+    ],
+    "colors": [
+      "$menu_title_gradient_text_begin_color",
+      "$menu_title_gradient_text_end_color"
+    ],
+    "margins": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "color": "$menu_color",
+  "alpha": 0.85,
+  "can_close": true,
+  "hide": true,
+  "margins": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "image_scaled_size": 40,
+  "radius": 10,
+  "show_dividers": false,
+  "items": [
+    {
+      "type": "Switch",
+      "name": "崩溃服务器",
+      "color": "$menu_item_color",
+      "tag": "fun_crash_server",
+      "items": [
+        {
+          "type": "CheckBox",
+          "key": "illegalData",
+          "name": "非法数据",
+          "color": "$menu_item_color",
+          "size": 8
         },
-        "color": "$menu_color",
-        "alpha": 0.85,
-        "can_close": true,
-        "hide": true,
-        "margins": [
-                0,
-                0,
-                0,
-                0
+        {
+          "type": "CheckBox",
+          "key": "particle",
+          "name": "粒子爆炸",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "multipleRpc",
+          "name": "多发RPC",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "forwardRpc",
+          "name": "转发RPC",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "antiPacket",
+          "name": "反数据包攻击",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "SeekBar",
+          "key": "count",
+          "format": "数据包%d个",
+          "color": "$menu_item_color",
+          "value": 10000,
+          "min": 1,
+          "max": 100000,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
         ],
-        "image_scaled_size": 40,
-        "radius": 10,
-        "show_dividers": false,
-        "items": [
-                {
-                        "type": "Switch",
-                        "name": "崩溃服务器",
-                        "color": "$menu_item_color",
-                        "size": 12,
-                        "padding": [
-                                5,
-                                0,
-                                5,
-                                0
-                        ],
-                        "shortcut": {
-                                "type": "CheckedButton",
-                                "params": [
-                                        65,
-                                        65
-                                ],
-                                "no_circle": true,
-                                "off": "close/NeuronOff_Crasher.png",
-                                "on": "open/NeuronOn_Crasher.png",
-                                "icon": "open/NeuronOn_Crasher.png"
-                        },
-                        "tag": "fun_crash_server",
-                        "items": [
-                                {
-                                        "type": "CheckBox",
-                                        "key": "particle",
-                                        "name": "粒子爆炸",
-                                        "color": "$menu_item_color",
-                                        "size": 12
-                                },
-                                {
-                                        "type": "CheckBox",
-                                        "key": "multipleRpc",
-                                        "name": "多发RPC",
-                                        "color": "$menu_item_color",
-                                        "size": 12
-                                },
-                                {
-                                        "type": "CheckBox",
-                                        "key": "forwardRpc",
-                                        "name": "转发RPC",
-                                        "color": "$menu_item_color",
-                                        "size": 12
-                                },
-                                {
-                                        "type": "CheckBox",
-                                        "key": "antiPacket",
-                                        "name": "反数据包攻击",
-                                        "color": "$menu_item_color",
-                                        "size": 12
-                                },
-                                {
-                                        "type": "SeekBar",
-                                        "key": "count",
-                                        "format": "数据包%d个",
-                                        "color": "$menu_item_color",
-                                        "size": 8,
-                                        "padding": [
-                                                0,
-                                                0,
-                                                0,
-                                                0
-                                        ],
-                                        "value": 10000,
-                                        "min": 1,
-                                        "max": 100000
-                                }
-                        ]
-                },
-                {
-                        "type": "TextView",
-                        "name": "NBT编辑器",
-                        "color": "$menu_item_color",
-                        "size": 12,
-                        "padding": [
-                                8,
-                                8,
-                                8,
-                                8
-                        ],
-                        "shortcut": {
-                                "type": "ClickButton",
-                                "params": [
-                                        65,
-                                        65
-                                ],
-                                "no_circle": true,
-                                "icon": "other/Neuron_NBT.png"
-                        },
-                        "tag": "fun_nbt_editor"
-                },
-                {
-                        "type": "TextView",
-                        "name": "花雨庭商店",
-                        "color": "$menu_item_color",
-                        "size": 12,
-                        "padding": [
-                                8,
-                                8,
-                                8,
-                                8
-                        ],
-                        "shortcut": {
-                                "type": "ClickButton",
-                                "params": [
-                                        65,
-                                        65
-                                ],
-                                "no_circle": true,
-                                "icon": "other/Neuron_Shop.png"
-                        },
-                        "tag": "fun_open_shop",
-                        "tip": "Only For HYT"
-                },
-                {
-                        "type": "TextView",
-                        "name": "BJD Shop(无效)",
-                        "color": "$menu_item_color",
-                        "size": 12,
-                        "padding": [
-                                10,
-                                10,
-                                10,
-                                10
-                        ],
-                        "shortcut": {
-                                "type": "ClickButton",
-                                "params": [
-                                        65,
-                                        65
-                                ],
-                                "no_circle": true,
-                                "icon": "other/Neuron_BJDShop.png"
-                        },
-                        "key": "5",
-                        "tip": "Only For BJD"
-                }
-        ]
+        "no_circle": true,
+        "off": "close/NeuronOff_Crasher.png",
+        "on": "open/NeuronOn_Crasher.png",
+        "icon": "open/NeuronOn_Crasher.png"
+      }
+    },
+    {
+      "type": "TextView",
+      "name": "NBT编辑器",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "shortcut": {
+        "type": "ClickButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "icon": "other/Neuron_NBT.png"
+      },
+      "tag": "fun_nbt_editor"
+    },
+    {
+      "type": "TextView",
+      "name": "BJD Shop(无效)",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "shortcut": {
+        "type": "ClickButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "icon": "other/Neuron_BJDShop.png"
+      },
+      "key": "5",
+      "tip": "Only For BJD"
+    },
+    {
+      "type": "TextView",
+      "name": "IP外进",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        10,
+        5,
+        10,
+        5
+      ],
+      "shortcut": {
+        "type": "ClickButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "icon": "other/Neuron_JoinGame.png"
+      },
+      "tag": "fun_join_game"
+    }
+  ]
 }

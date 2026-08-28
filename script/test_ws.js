@@ -1,8 +1,10 @@
 
+const sock = require('socket')
+
 const url = 'wss://echo.websocket.org'
 
 try {
-    const ws = new WebSocket(url)
+    const ws = new sock.WebSocket(url)
 
     ws.setOnTextMessageListener((message) => {
         console.log(message)

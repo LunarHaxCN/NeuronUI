@@ -4,10 +4,12 @@
  * @description: Python executor
  */
 
+const app = require('app');
+
 function onCallModuleEvent(args) {
     const {fun, value} = args;
 
     if (fun === 'script_py_executor' ) {
-        execPython(getResource('py') + '/file.py')
+        app.execPython(app.getResource('py') + '/file.py')
     }
 }

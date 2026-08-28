@@ -1,4 +1,4 @@
-﻿{
+{
   "type": "Menu",
   "title": {
     "name": "『Player』",
@@ -15,13 +15,23 @@
       "$menu_title_gradient_text_begin_color",
       "$menu_title_gradient_text_end_color"
     ],
-    "margins": [0, 0, 0, 0]
+    "margins": [
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "color": "$menu_color",
   "alpha": 0.85,
   "can_close": true,
   "hide": true,
-  "margins": [0, 0, 0, 0],
+  "margins": [
+    0,
+    0,
+    0,
+    0
+  ],
   "image_scaled_size": 40,
   "radius": 10,
   "show_dividers": false,
@@ -30,60 +40,41 @@
       "type": "RadioGroup",
       "name": "游戏模式",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [
-        5,
-        5,
-        5,
-        0
-      ],
       "tag": "fun_game_mode",
       "items": [
         {
           "key": "survival",
           "name": "生存",
-          "color": "$menu_item_color",
-          "size": 8
+          "color": "$menu_item_color"
         },
         {
           "key": "create",
           "name": "创造",
-          "color": "$menu_item_color",
-          "size": 8
+          "color": "$menu_item_color"
         },
         {
           "key": "adventure",
           "name": "冒险",
-          "color": "$menu_item_color",
-          "size": 8
+          "color": "$menu_item_color"
         },
         {
           "key": "spectator",
           "name": "观察者",
-          "color": "$menu_item_color",
-          "size": 8
+          "color": "$menu_item_color"
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "游戏速度",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
         0,
         5,
         0
-      ],
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [65, 65],
-        "no_circle": true,
-        "off":"close/NeuronOff_Timer.png",
-        "on":"open/NeuronOn_Timer.png",
-        "icon":"open/NeuronOn_Timer.png"
-      },
+      ]
+    },
+    {
+      "type": "Switch",
+      "name": "游戏速度",
+      "color": "$menu_item_color",
       "tag": "fun_timer",
       "items": [
         {
@@ -91,23 +82,18 @@
           "key": "speed",
           "format": "速度%.2f",
           "color": "$menu_item_color",
+          "value": 20.0,
+          "min": 0.0,
+          "max": 100.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 20.0,
-          "min": 0.0,
-          "max": 100.0
+          ]
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "能力",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
@@ -117,12 +103,20 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_Ability.png",
-        "on":"open/NeuronOn_Ability.png",
-        "icon":"open/NeuronOn_Ability.png"
-      },
+        "off": "close/NeuronOff_Timer.png",
+        "on": "open/NeuronOn_Timer.png",
+        "icon": "open/NeuronOn_Timer.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "能力",
+      "color": "$menu_item_color",
       "tag": "fun_abilities",
       "items": [
         {
@@ -242,40 +236,56 @@
           "key": "flySpeed",
           "format": "飞行速度%.2f",
           "color": "$menu_item_color",
+          "value": 0.1,
+          "min": 0.0,
+          "max": 1.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 0.1,
-          "min": 0.0,
-          "max": 1.0
+          ]
         },
         {
           "type": "SeekBar",
           "key": "walkSpeed",
           "format": "步行速度%.2f",
           "color": "$menu_item_color",
+          "value": 0.1,
+          "min": 0.0,
+          "max": 1.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "verticalFlySpeed",
+          "format": "垂直飞行速度%.2f",
+          "color": "$menu_item_color",
           "value": 0.1,
           "min": 0.0,
-          "max": 1.0
+          "max": 1.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
         },
         {
           "type": "CheckBox",
           "key": "elytra_fly",
           "name": "鞘翅飞行",
           "color": "$menu_item_color",
-          "size": 8,
-          "on": "穿上鞘翅，离开地面进入飞行模式(建议先打开飞行状态)"
+          "on": "穿上鞘翅，离开地面进入飞行模式(建议先打开飞行状态)",
+          "size": 8
         },
         {
           "type": "CheckBox",
@@ -284,12 +294,7 @@
           "color": "$menu_item_color",
           "size": 8
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "自动开箱",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
@@ -299,12 +304,20 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_ChestAura.png",
-        "on":"open/NeuronOn_ChestAura.png",
-        "icon":"open/NeuronOn_ChestAura.png"
-      },
+        "off": "close/NeuronOff_Ability.png",
+        "on": "open/NeuronOn_Ability.png",
+        "icon": "open/NeuronOn_Ability.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "自动开箱",
+      "color": "$menu_item_color",
       "tag": "fun_chest_aura",
       "items": [
         {
@@ -312,16 +325,16 @@
           "key": "distance",
           "format": "距离%.2f",
           "color": "$menu_item_color",
+          "value": 6.0,
+          "min": 1.0,
+          "max": 6.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 6.0,
-          "min": 1.0,
-          "max": 6.0
+          ]
         },
         {
           "type": "CheckBox",
@@ -330,12 +343,7 @@
           "color": "$menu_item_color",
           "size": 8
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "快速拿物",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
@@ -345,12 +353,20 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_FastTake.png",
-        "on":"open/NeuronOn_FastTake.png",
-        "icon":"open/NeuronOn_FastTake.png"
-      },
+        "off": "close/NeuronOff_ChestAura.png",
+        "on": "open/NeuronOn_ChestAura.png",
+        "icon": "open/NeuronOn_ChestAura.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "快速拿物",
+      "color": "$menu_item_color",
       "tag": "fun_chest_stealer",
       "items": [
         {
@@ -362,26 +378,37 @@
         },
         {
           "type": "SeekBar",
-          "key": "delay",
-          "format": "延时%d",
+          "key": "slots",
+          "format": "每次拿%d组",
           "color": "$menu_item_color",
+          "value": 3,
+          "min": 1,
+          "max": 10,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 0,
-          "min": 0,
-          "max": 30
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "delay",
+          "format": "延时%d",
+          "color": "$menu_item_color",
+          "value": 1,
+          "min": 1,
+          "max": 30,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "自动破坏方块",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
@@ -391,12 +418,20 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_Destroy.png",
-        "on":"open/NeuronOn_Destroy.png",
-        "icon":"open/NeuronOn_Destroy.png"
-      },
+        "off": "close/NeuronOff_FastTake.png",
+        "on": "open/NeuronOn_FastTake.png",
+        "icon": "open/NeuronOn_FastTake.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "自动破坏方块",
+      "color": "$menu_item_color",
       "tag": "fun_auto_destroy_block",
       "items": [
         {
@@ -416,7 +451,42 @@
         {
           "type": "CheckBox",
           "key": "minecraft:diamond_ore",
-          "name": "钻石矿",
+          "name": "钻石矿石",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "minecraft:deepslate_diamond_ore",
+          "name": "深层钻石矿石",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "minecraft:gold_ore",
+          "name": "金矿石",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "minecraft:deepslate_gold_ore",
+          "name": "深层金矿石",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "minecraft:iron_ore",
+          "name": "铁矿石",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "minecraft:deepslate_iron_ore",
+          "name": "深层铁矿石",
           "color": "$menu_item_color",
           "size": 8
         },
@@ -428,34 +498,61 @@
           "size": 8
         },
         {
+          "type": "CheckBox",
+          "key": "minecraft:sculk",
+          "name": "幽匿块",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "minecraft:sculk_catalyst",
+          "name": "幽匿催发体",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "minecraft:sculk_sensor",
+          "name": "幽匿感测体",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "minecraft:sculk_shrieker",
+          "name": "幽匿尖啸体",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
           "type": "SeekBar",
           "key": "distance",
           "format": "距离%.2f",
           "color": "$menu_item_color",
+          "value": 7.0,
+          "min": 1.0,
+          "max": 40.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 7.0,
-          "min": 1.0,
-          "max": 40.0
+          ]
         },
         {
           "type": "RadioGroup",
           "key": "packet_mode",
           "name": "发包模式",
           "color": "$menu_item_color",
-          "size": 8,
           "items": [
             {
               "key": "vanilla",
               "name": "原版",
               "color": "$menu_item_color",
-              "size": 8,
-              "checked": true
+              "checked": true,
+              "size": 8
             },
             {
               "key": "nukkit",
@@ -463,14 +560,10 @@
               "color": "$menu_item_color",
               "size": 8
             }
-          ]
+          ],
+          "size": 8
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "自动点击",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
@@ -480,12 +573,20 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_AutoClicker.png",
-        "on":"open/NeuronOn_AutoClicker.png",
-        "icon":"open/NeuronOn_AutoClicker.png"
-      },
+        "off": "close/NeuronOff_Destroy.png",
+        "on": "open/NeuronOn_Destroy.png",
+        "icon": "open/NeuronOn_Destroy.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "自动点击",
+      "color": "$menu_item_color",
       "tag": "fun_auto_clicker",
       "items": [
         {
@@ -493,23 +594,18 @@
           "key": "delay",
           "format": "操作延迟%d",
           "color": "$menu_item_color",
+          "value": 5,
+          "min": 0,
+          "max": 20,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 5,
-          "min": 0,
-          "max": 20
+          ]
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "点击破坏",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
@@ -519,12 +615,20 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_ClickDestroy.png",
-        "on":"open/NeuronOn_ClickDestroy.png",
-        "icon":"open/NeuronOn_ClickDestroy.png"
-      },
+        "off": "close/NeuronOff_AutoClicker.png",
+        "on": "open/NeuronOn_AutoClicker.png",
+        "icon": "open/NeuronOn_AutoClicker.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "点击破坏",
+      "color": "$menu_item_color",
       "tag": "fun_click_destroy",
       "items": [
         {
@@ -532,45 +636,44 @@
           "key": "mode",
           "name": "破坏模式",
           "color": "$menu_item_color",
-          "size": 8,
           "items": [
             {
               "key": "line",
               "name": "线性",
               "color": "$menu_item_color",
-              "size": 8,
-              "tip": "在点击位置竖一字型破坏"
+              "tip": "在点击位置竖一字型破坏",
+              "size": 8
             },
             {
               "key": "cross",
               "name": "十字",
               "color": "$menu_item_color",
-              "size": 8,
-              "tip": "在点击位置竖十字型破坏"
+              "tip": "在点击位置竖十字型破坏",
+              "size": 8
             },
             {
               "key": "matrix",
               "name": "矩阵",
               "color": "$menu_item_color",
               "checked": true,
-              "size": 8,
-              "tip": "在点击位置10*10矩阵破坏"
+              "tip": "在点击位置10*10矩阵破坏",
+              "size": 8
             }
-          ]
+          ],
+          "size": 8
         },
         {
           "type": "RadioGroup",
           "key": "packet_mode",
           "name": "发包模式",
           "color": "$menu_item_color",
-          "size": 8,
           "items": [
             {
               "key": "vanilla",
               "name": "原版",
               "color": "$menu_item_color",
-              "size": 8,
-              "checked": true
+              "checked": true,
+              "size": 8
             },
             {
               "key": "nukkit",
@@ -578,14 +681,10 @@
               "color": "$menu_item_color",
               "size": 8
             }
-          ]
+          ],
+          "size": 8
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "连锁挖掘",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
@@ -595,12 +694,20 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_ChainMine.png",
-        "on":"open/NeuronOn_ChainMine.png",
-        "icon":"open/NeuronOn_ChainMine.png"
-      },
+        "off": "close/NeuronOff_ClickDestroy.png",
+        "on": "open/NeuronOn_ClickDestroy.png",
+        "icon": "open/NeuronOn_ClickDestroy.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "连锁挖掘",
+      "color": "$menu_item_color",
       "tag": "fun_chain_mining",
       "items": [
         {
@@ -608,49 +715,75 @@
           "key": "distance",
           "format": "破坏半径%.2f",
           "color": "$menu_item_color",
+          "value": 7.0,
+          "min": 1.0,
+          "max": 12.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 7.0,
-          "min": 1.0,
-          "max": 12.0
+          ]
         },
         {
           "type": "SeekBar",
           "key": "search_distance",
           "format": "搜索半径%.2f",
           "color": "$menu_item_color",
+          "value": 10.0,
+          "min": 1.0,
+          "max": 100.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 10.0,
-          "min": 1.0,
-          "max": 100.0
+          ]
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_ChainMine.png",
+        "on": "open/NeuronOn_ChainMine.png",
+        "icon": "open/NeuronOn_ChainMine.png"
+      }
     },
     {
       "type": "Switch",
       "name": "方块操作距离",
       "color": "$menu_item_color",
       "size": 12,
-      "padding": [5, 0, 5, 0],
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
       "tag": "fun_extended_block_reach",
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_ExBlockReach.png",
-        "on":"open/NeuronOn_ExBlockReach.png",
-        "icon":"open/NeuronOn_ExBlockReach.png"
+        "off": "close/NeuronOff_ExBlockReach.png",
+        "on": "open/NeuronOn_ExBlockReach.png",
+        "icon": "open/NeuronOn_ExBlockReach.png"
       },
       "items": [
         {
@@ -659,7 +792,12 @@
           "format": "距离 %.2f",
           "color": "$menu_item_color",
           "size": 8,
-          "padding": [0, 0, 0, 0],
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
           "value": 7.0,
           "min": 1.0,
           "max": 255.0
@@ -670,6 +808,7 @@
       "type": "Switch",
       "name": "自动图腾",
       "color": "$menu_item_color",
+      "tag": "fun_auto_totem",
       "size": 12,
       "padding": [
         5,
@@ -679,33 +818,20 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_AutoTotem.png",
-        "on":"open/NeuronOn_AutoTotem.png",
-        "icon":"open/NeuronOn_AutoTotem.png"
-      },
-      "tag": "fun_auto_totem"
+        "off": "close/NeuronOff_AutoTotem.png",
+        "on": "open/NeuronOn_AutoTotem.png",
+        "icon": "open/NeuronOn_AutoTotem.png"
+      }
     },
     {
       "type": "Switch",
       "name": "无摔落伤害",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [
-        5,
-        0,
-        5,
-        0
-      ],
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [65, 65],
-        "no_circle": true,
-        "off":"close/NeuronOff_NoFall.png",
-        "on":"open/NeuronOn_NoFall.png",
-        "icon":"open/NeuronOn_NoFall.png"
-      },
       "tag": "fun_no_fall",
       "items": [
         {
@@ -713,16 +839,16 @@
           "key": "speed",
           "format": "下落速度%.2f",
           "color": "$menu_item_color",
+          "value": 1.0,
+          "min": 0.1,
+          "max": 2.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 1.0,
-          "min": 0.1,
-          "max": 2.0
+          ]
         },
         {
           "type": "CheckBox",
@@ -773,12 +899,31 @@
           "color": "$menu_item_color",
           "size": 8
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_NoFall.png",
+        "on": "open/NeuronOn_NoFall.png",
+        "icon": "open/NeuronOn_NoFall.png"
+      }
     },
     {
       "type": "Switch",
       "name": "无火焰附加",
       "color": "$menu_item_color",
+      "tag": "fun_no_fire",
       "size": 12,
       "padding": [
         5,
@@ -788,18 +933,21 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_NoFire.png",
-        "on":"open/NeuronOn_NoFire.png",
-        "icon":"open/NeuronOn_NoFire.png"
-      },
-      "tag": "fun_no_fire"
+        "off": "close/NeuronOff_NoFire.png",
+        "on": "open/NeuronOn_NoFire.png",
+        "icon": "open/NeuronOn_NoFire.png"
+      }
     },
     {
       "type": "Switch",
       "name": "自动穿装",
       "color": "$menu_item_color",
+      "tag": "fun_auto_armor",
       "size": 12,
       "padding": [
         5,
@@ -807,75 +955,57 @@
         5,
         0
       ],
-      "tag": "fun_auto_armor",
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_AutoArmor.png",
-        "on":"open/NeuronOn_AutoArmor.png",
-        "icon":"open/NeuronOn_AutoArmor.png"
+        "off": "close/NeuronOff_AutoArmor.png",
+        "on": "open/NeuronOn_AutoArmor.png",
+        "icon": "open/NeuronOn_AutoArmor.png"
       }
     },
     {
       "type": "Switch",
       "name": "放大镜",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [
-        5,
-        0,
-        5,
-        0
-      ],
       "tag": "fun_zoom",
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [65, 65],
-        "no_circle": true,
-        "off":"close/NeuronOff_Zoom.png",
-        "on":"open/NeuronOn_Zoom.png",
-        "icon":"open/NeuronOn_Zoom.png"
-      },
       "items": [
         {
           "type": "SeekBar",
           "key": "fov",
           "format": "视角%.2f",
           "color": "$menu_item_color",
+          "value": 120.0,
+          "min": 0.0,
+          "max": 150.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 120.0,
-          "min": 0.0,
-          "max": 150.0
+          ]
         },
         {
           "type": "SeekBar",
           "key": "modifier",
           "format": "附加值%.2f",
           "color": "$menu_item_color",
+          "value": 1.0,
+          "min": 0.0,
+          "max": 1.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 1.0,
-          "min": 0.0,
-          "max": 1.0
+          ]
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "自动吃物",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
@@ -885,12 +1015,20 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_AutoEat.png",
-        "on":"open/NeuronOn_AutoEat.png",
-        "icon":"open/NeuronOn_AutoEat.png"
-      },
+        "off": "close/NeuronOff_Zoom.png",
+        "on": "open/NeuronOn_Zoom.png",
+        "icon": "open/NeuronOn_Zoom.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "自动吃物",
+      "color": "$menu_item_color",
       "tag": "fun_auto_eat",
       "items": [
         {
@@ -903,25 +1041,44 @@
         {
           "type": "SeekBar",
           "key": "health",
-          "format": "生命值低于%.2f自动吃金苹果/附魔金苹果",
+          "format": "生命值低于\n%.2f\n自动吃\n金苹果/附魔金苹果",
           "color": "$menu_item_color",
+          "value": 10.0,
+          "min": 0.5,
+          "max": 40.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 10.0,
-          "min": 0.5,
-          "max": 40.0
+          ]
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_AutoEat.png",
+        "on": "open/NeuronOn_AutoEat.png",
+        "icon": "open/NeuronOn_AutoEat.png"
+      }
     },
     {
       "type": "Switch",
       "name": "麒麟臂",
       "color": "$menu_item_color",
+      "tag": "fun_fast_destroy",
       "size": 12,
       "padding": [
         5,
@@ -931,33 +1088,20 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_KirinHand.png",
-        "on":"open/NeuronOn_KirinHand.png",
-        "icon":"open/NeuronOn_KirinHand.png"
-      },
-      "tag": "fun_fast_destroy"
+        "off": "close/NeuronOff_KirinHand.png",
+        "on": "open/NeuronOn_KirinHand.png",
+        "icon": "open/NeuronOn_KirinHand.png"
+      }
     },
     {
       "type": "Switch",
       "name": "自动破坏",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [
-        5,
-        0,
-        5,
-        0
-      ],
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [65, 65],
-        "no_circle": true,
-        "off":"close/NeuronOff_AutoDestroy.png",
-        "on":"open/NeuronOn_AutoDestroy.png",
-        "icon":"open/NeuronOn_AutoDestroy.png"
-      },
       "tag": "fun_auto_destroy",
       "items": [
         {
@@ -965,38 +1109,55 @@
           "key": "mode",
           "name": "破坏模式",
           "color": "$menu_item_color",
-          "size": 8,
           "items": [
             {
               "key": "line",
               "name": "线性",
               "color": "$menu_item_color",
-              "size": 8,
-              "tip": "在自身位置竖一字型破坏"
+              "tip": "在自身位置竖一字型破坏",
+              "size": 8
             },
             {
               "key": "cross",
               "name": "十字",
               "color": "$menu_item_color",
-              "size": 8,
-              "tip": "在自身位置竖十字型破坏"
+              "tip": "在自身位置竖十字型破坏",
+              "size": 8
             },
             {
               "key": "matrix",
               "name": "矩阵",
               "color": "$menu_item_color",
               "checked": true,
-              "size": 8,
-              "tip": "在自身位置10*10矩阵破坏"
+              "tip": "在自身位置10*10矩阵破坏",
+              "size": 8
             }
-          ]
+          ],
+          "size": 8
+        },
+        {
+          "type": "RadioGroup",
+          "key": "packet_mode",
+          "name": "发包模式",
+          "color": "$menu_item_color",
+          "items": [
+            {
+              "key": "vanilla",
+              "name": "原版",
+              "color": "$menu_item_color",
+              "checked": true,
+              "size": 8
+            },
+            {
+              "key": "nukkit",
+              "name": "Nukkit",
+              "color": "$menu_item_color",
+              "size": 8
+            }
+          ],
+          "size": 8
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "单人无敌",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
@@ -1006,12 +1167,20 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_Invincible.png",
-        "on":"open/NeuronOn_Invincible.png",
-        "icon":"open/NeuronOn_Invincible.png"
-      },
+        "off": "close/NeuronOff_AutoDestroy.png",
+        "on": "open/NeuronOn_AutoDestroy.png",
+        "icon": "open/NeuronOn_AutoDestroy.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "单人无敌",
+      "color": "$menu_item_color",
       "tag": "fun_invincible",
       "items": [
         {
@@ -1019,41 +1188,49 @@
           "key": "attack_hurt",
           "name": "攻击伤害",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "checked": true,
+          "size": 8
         },
         {
           "type": "CheckBox",
           "key": "effect_hurt",
           "name": "药水伤害",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "checked": true,
+          "size": 8
         },
         {
           "type": "CheckBox",
           "key": "forced_hurt",
           "name": "强制伤害",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "checked": true,
+          "size": 8
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_Invincible.png",
+        "on": "open/NeuronOn_Invincible.png",
+        "icon": "open/NeuronOn_Invincible.png"
+      }
     },
     {
       "type": "Switch",
       "name": "发包挖掘",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [5, 0, 5, 0],
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [65, 65],
-        "no_circle": true,
-        "off": "close/NeuronOff_PacketMine.png",
-        "on": "open/NeuronOn_PacketMine.png",
-        "icon": "open/NeuronOn_PacketMine.png"
-      },
       "tag": "fun_packet_mine",
       "items": [
         {
@@ -1061,61 +1238,162 @@
           "key": "count",
           "format": "每次发包%d",
           "color": "$menu_item_color",
-          "size": 8,
-          "padding": [0, 0, 0, 0],
           "value": 10,
           "min": 1,
-          "max": 30
+          "max": 30,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_PacketMine.png",
+        "on": "open/NeuronOn_PacketMine.png",
+        "icon": "open/NeuronOn_PacketMine.png"
+      }
     },
     {
       "type": "Switch",
       "name": "相机穿墙",
       "color": "$menu_item_color",
+      "tag": "fun_no_camera_clip",
       "size": 12,
-      "padding": [5, 0, 5, 0],
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
         "off": "close/NeuronOff_NoCameraClip.png",
         "on": "open/NeuronOn_NoCameraClip.png",
         "icon": "open/NeuronOn_NoCameraClip.png"
-      },
-      "tag": "fun_no_camera_clip"
+      }
     },
     {
       "type": "Switch",
       "name": "无受伤抖动",
       "color": "$menu_item_color",
+      "tag": "fun_no_hurt_camera",
       "size": 12,
-      "padding": [5, 0, 5, 0],
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
         "off": "close/NeuronOff_NoHurtCamera.png",
         "on": "open/NeuronOn_NoHurtCamera.png",
         "icon": "open/NeuronOn_NoHurtCamera.png"
-      },
-      "tag": "fun_no_hurt_camera"
+      }
     },
     {
       "type": "Switch",
       "name": "无限投射",
       "color": "$menu_item_color",
+      "tag": "fun_infinite_throw",
       "size": 12,
-      "padding": [5, 0, 5, 0],
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
         "off": "close/NeuronOff_InfiniteThrow.png",
         "on": "open/NeuronOn_InfiniteThrow.png",
         "icon": "open/NeuronOn_InfiniteThrow.png"
+      }
+    },
+    {
+      "type": "TextView",
+      "name": "传送菜单+",
+      "color": "$menu_item_color",
+      "margins": 7,
+      "padding": 5,
+      "tag": "fun_teleport_menu",
+      "shortcut": {
+        "type": "ClickButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "icon": "other/Neuron_TpMenu.png"
       },
-      "tag": "fun_infinite_throw"
+      "size": 12
+    },
+    {
+      "type": "TextView",
+      "name": "附魔菜单+",
+      "color": "$menu_item_color",
+      "margins": 7,
+      "padding": 5,
+      "tag": "fun_enchant_menu",
+      "shortcut": {
+        "type": "ClickButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "icon": "other/Neuron_Enchante.png"
+      },
+      "size": 12
+    },
+    {
+      "type": "TextView",
+      "name": "物品编辑器+",
+      "color": "$menu_item_color",
+      "margins": 7,
+      "padding": 5,
+      "tag": "fun_item_editor",
+      "shortcut": {
+        "type": "ClickButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "icon": "other/Neuron_ItemEditor.png"
+      },
+      "size": 12
     }
   ]
 }

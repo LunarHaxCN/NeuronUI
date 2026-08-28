@@ -1,4 +1,4 @@
-﻿{
+{
   "type": "Menu",
   "title": {
     "name": "『Neuron』",
@@ -15,12 +15,22 @@
       "$menu_title_gradient_text_begin_color",
       "$menu_title_gradient_text_end_color"
     ],
-    "margins": [0, 0, 0, 0]
+    "margins": [
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "color": "$menu_color",
   "alpha": 0.85,
   "can_close": false,
-  "margins": [0, 0, 0, 0],
+  "margins": [
+    0,
+    0,
+    0,
+    0
+  ],
   "image_scaled_size": 40,
   "radius": 10,
   "show_dividers": false,
@@ -144,6 +154,19 @@
     },
     {
       "type": "TextView",
+      "name": "Super",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "open": "Neuron_super"
+    },
+    {
+      "type": "TextView",
       "name": "Settings",
       "color": "$menu_item_color",
       "size": 12,
@@ -174,7 +197,12 @@
       "url": "https://github.com/MoYuanCN/",
       "color": "$menu_item_color",
       "size": 12,
-      "padding": [5, 5, 5, 5]
+      "padding": [
+        5,
+        5,
+        5,
+        5
+      ]
     }
   ]
 }

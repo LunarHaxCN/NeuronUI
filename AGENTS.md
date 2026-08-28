@@ -36,8 +36,7 @@ NeuronUI 是一个 Minecraft 基岩版实用客户端的 UI 资源包，使用 J
 ### 新增功能步骤
 1. 在对应 `Neuron_*.json` 的 `items` 数组中添加条目
 2. 绘制快捷键图标放入 `textures/close/` 和 `textures/open/`
-3. 在 `new_icons_list.md` 中登记新图标
-4. 在更新日志中添加记录
+3. 在更新日志中添加记录
 
 ### 数据包配置 (conf_packet.json)
 

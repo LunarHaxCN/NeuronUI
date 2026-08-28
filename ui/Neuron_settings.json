@@ -1,4 +1,4 @@
-﻿{
+{
   "type": "Menu",
   "title": {
     "name": "『Settings』",
@@ -15,13 +15,23 @@
       "$menu_title_gradient_text_begin_color",
       "$menu_title_gradient_text_end_color"
     ],
-    "margins": [0, 0, 0, 0]
+    "margins": [
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "color": "$menu_color",
   "alpha": 0.85,
   "can_close": true,
   "hide": true,
-  "margins": [0, 0, 0, 0],
+  "margins": [
+    0,
+    0,
+    0,
+    0
+  ],
   "image_scaled_size": 40,
   "radius": 10,
   "show_dividers": false,
@@ -30,6 +40,69 @@
       "type": "Switch",
       "name": "显示水印",
       "color": "$menu_item_color",
+      "tag": "fun_watermark",
+      "bind_keys": [
+        "P"
+      ],
+      "items": [
+        {
+          "type": "SeekBar",
+          "key": "rotation",
+          "format": "旋转角度%.2f",
+          "color": "$menu_item_color",
+          "value": -30.0,
+          "min": -180.0,
+          "max": 188.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "size",
+          "format": "文本大小%.2f",
+          "color": "$menu_item_color",
+          "value": 70.0,
+          "min": 10.0,
+          "max": 100.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "alpha",
+          "format": "透明度%d",
+          "color": "$menu_item_color",
+          "value": 76,
+          "min": 0,
+          "max": 255,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "ColorPicker",
+          "key": "color",
+          "name": "自定义颜色",
+          "color": "$menu_item_color",
+          "default_color": -65281,
+          "ok": "确定",
+          "cancel": "取消"
+        }
+      ],
       "size": 12,
       "padding": [
         5,
@@ -39,60 +112,15 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_WaterMark.png",
-        "on":"open/NeuronOn_WaterMark.png",
-        "icon":"open/NeuronOn_WaterMark.png"
-      },
-      "tag": "fun_watermark",
-      "bind_keys": ["P"],
-      "items": [
-        {
-          "type": "SeekBar",
-          "key": "rotation",
-          "format": "旋转角度%.2f",
-          "color": "$menu_item_color",
-          "size": 8,
-          "padding": [0, 0, 0, 0],
-          "value": -30.0,
-          "min": -180.0,
-          "max": 188.0
-        },
-        {
-          "type": "SeekBar",
-          "key": "size",
-          "format": "文本大小%.2f",
-          "color": "$menu_item_color",
-          "size": 8,
-          "padding": [0, 0, 0, 0],
-          "value": 70.0,
-          "min": 10.0,
-          "max": 100.0
-        },
-        {
-          "type": "SeekBar",
-          "key": "alpha",
-          "format": "透明度%d",
-          "color": "$menu_item_color",
-          "size": 8,
-          "padding": [0, 0, 0, 0],
-          "value": 76,
-          "min": 0,
-          "max": 255
-        },
-        {
-          "type": "ColorPicker",
-          "key": "color",
-          "name": "自定义颜色",
-          "size": 8,
-          "color": "$menu_item_color",
-          "padding": [10, 10, 10, 10],
-          "default_color": -65281,
-          "ok": "确定",
-          "cancel": "取消"
-        }
-      ]
+        "off": "close/NeuronOff_WaterMark.png",
+        "on": "open/NeuronOn_WaterMark.png",
+        "icon": "open/NeuronOn_WaterMark.png"
+      }
     },
     {
       "type": "Switch",
@@ -107,11 +135,14 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_CopyAddress.png",
-        "on":"open/NeuronOn_CopyAddress.png",
-        "icon":"open/NeuronOn_CopyAddress.png"
+        "off": "close/NeuronOff_CopyAddress.png",
+        "on": "open/NeuronOn_CopyAddress.png",
+        "icon": "open/NeuronOn_CopyAddress.png"
       },
       "tag": "fun_join_copy_address"
     },
@@ -119,125 +150,119 @@
       "type": "Switch",
       "name": "悬浮窗口半屏显示",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [
-        5,
-        5,
-        5,
-        5
-      ],
-      "checked": true,
-      "register_setting": "setting_window_cut"
-    },
-    {
-      "type": "Switch",
-      "name": "隐藏菜单快捷按钮(长按)",
-      "color": "$menu_item_color",
+      "register_setting": "setting_window_cut",
       "size": 12,
       "padding": [
         5,
         0,
         5,
         0
-      ],
+      ]
+    },
+    {
+      "type": "Switch",
+      "name": "隐藏菜单快捷按钮(长按)",
+      "color": "$menu_item_color",
+      "tag": "fun_hide_menu_shortcut",
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_HideMenu.png",
-        "on":"open/NeuronOn_HideMenu.png",
-        "icon":"open/NeuronOn_HideMenu.png"
+        "off": "close/NeuronOff_HideMenu.png",
+        "on": "open/NeuronOn_HideMenu.png",
+        "icon": "open/NeuronOn_HideMenu.png"
       },
-      "tag": "fun_hide_menu_shortcut"
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ]
     },
     {
       "type": "TextView",
       "name": "关于",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [
-        5,
-        5,
-        5,
-        5
-      ],
-      "open": "Neuron_about"
+      "margins": 7,
+      "padding": 5,
+      "open": "Neuron_about",
+      "size": 12
     },
     {
       "type": "TextView",
       "name": "删除游戏数据",
       "color": "$menu_item_set_color",
+      "margins": 7,
+      "padding": 5,
+      "tag": "fun_delete_app_data",
       "size": 12,
-      "padding": [
-        5,
-        5,
-        5,
-        5
-      ],
       "shortcut": {
         "type": "ClickButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "icon":"other/Neuron_DeleteAppData.png"
-      },
-      "tag": "fun_delete_app_data"
+        "icon": "other/Neuron_DeleteAppData.png"
+      }
     },
     {
       "type": "TextView",
       "name": "删除用户数据",
       "color": "$menu_item_set_color",
+      "margins": 7,
+      "padding": 5,
+      "tag": "fun_delete_user_data",
       "size": 12,
-      "padding": [
-        5,
-        5,
-        5,
-        5
-      ],
       "shortcut": {
         "type": "ClickButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "icon":"other/Neuron_DeleteUserData.png"
-      },
-      "tag": "fun_delete_user_data"
+        "icon": "other/Neuron_DeleteUserData.png"
+      }
     },
     {
       "type": "TextView",
       "name": "删除下载包缓存",
       "color": "$menu_item_set_color",
+      "margins": 7,
+      "padding": 5,
+      "tag": "fun_delete_pack_cache",
       "size": 12,
-      "padding": [
-        5,
-        5,
-        5,
-        5
-      ],
       "shortcut": {
         "type": "ClickButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "icon":"other/Neuron_DeletePackCache.png"
-      },
-      "tag": "fun_delete_pack_cache"
+        "icon": "other/Neuron_DeletePackCache.png"
+      }
     },
     {
       "type": "TextView",
       "name": "退出游戏登录",
       "color": "$menu_item_set_color",
+      "margins": 7,
+      "padding": 5,
+      "tag": "fun_netease_logout",
       "size": 12,
-      "padding": [
-        5,
-        5,
-        5,
-        5
-      ],
       "shortcut": {
         "type": "ClickButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "icon":"other/Neuron_LogOut.png"
-      },
-      "tag": "fun_netease_logout"
+        "icon": "other/Neuron_LogOut.png"
+      }
     },
     {
       "type": "TextView",
@@ -252,9 +277,12 @@
       ],
       "shortcut": {
         "type": "ClickButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "icon":"other/Neuron_ReactNativeShow.png"
+        "icon": "other/Neuron_ReactNativeShow.png"
       },
       "tag": "fun_rn_visible"
     },
@@ -271,9 +299,12 @@
       ],
       "shortcut": {
         "type": "ClickButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "icon":"other/Neuron_ReactNativeHide.png"
+        "icon": "other/Neuron_ReactNativeHide.png"
       },
       "tag": "fun_rn_gone"
     },
@@ -290,9 +321,12 @@
       ],
       "shortcut": {
         "type": "ClickButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "icon":"other/Neuron_ReactNativeOpen.png"
+        "icon": "other/Neuron_ReactNativeOpen.png"
       },
       "tag": "fun_rn_open"
     },
@@ -309,9 +343,12 @@
       ],
       "shortcut": {
         "type": "ClickButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "icon":"other/Neuron_ReactNativeClose.png"
+        "icon": "other/Neuron_ReactNativeClose.png"
       },
       "tag": "fun_rn_close"
     },
@@ -328,9 +365,12 @@
       ],
       "shortcut": {
         "type": "ClickButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "icon":"other/Neuron_ReactNativeShowDevOptionsDialog.png"
+        "icon": "other/Neuron_ReactNativeShowDevOptionsDialog.png"
       },
       "tag": "fun_rn_show_dev_options_dialog"
     },
@@ -338,20 +378,19 @@
       "type": "TextView",
       "name": "MCPDecrypt",
       "color": "$menu_item_set_color",
+      "margins": 7,
+      "padding": 5,
+      "tag": "fun_mcp_decrypt",
       "size": 12,
-      "padding": [
-        5,
-        5,
-        5,
-        5
-      ],
       "shortcut": {
         "type": "ClickButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "icon":"other/Neuron_MCPDecrypt.png"
-      },
-      "tag": "fun_mcp_decrypt"
+        "icon": "other/Neuron_MCPDecrypt.png"
+      }
     },
     {
       "type": "Switch",
@@ -366,11 +405,14 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_ReactNativeDebug.png",
-        "on":"open/NeuronOn_ReactNativeDebug.png",
-        "icon":"open/NeuronOn_ReactNativeDebug.png"
+        "off": "close/NeuronOff_ReactNativeDebug.png",
+        "on": "open/NeuronOn_ReactNativeDebug.png",
+        "icon": "open/NeuronOn_ReactNativeDebug.png"
       },
       "tag": "fun_rn_debugable"
     },
@@ -391,29 +433,37 @@
       "type": "TextView",
       "name": "保存全部配置",
       "color": "$menu_item_color",
+      "margins": 7,
+      "padding": 5,
+      "tag": "fun_save_menus_config",
       "size": 12,
-      "padding": [5, 5, 5, 5],
       "shortcut": {
         "type": "ClickButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
         "icon": "other/Neuron_SaveMenusConfig.png"
-      },
-      "tag": "fun_save_menus_config"
+      }
     },
     {
       "type": "TextView",
       "name": "加载全部配置",
       "color": "$menu_item_color",
+      "margins": 7,
+      "padding": 5,
+      "tag": "fun_load_menus_config",
       "size": 12,
-      "padding": [5, 5, 5, 5],
       "shortcut": {
         "type": "ClickButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
         "icon": "other/Neuron_LoadMenusConfig.png"
-      },
-      "tag": "fun_load_menus_config"
+      }
     }
   ]
 }

@@ -4,6 +4,9 @@
  * @description: JavaScript 与 Native 交互的接口
  */
 
+const System = require('os')
+const app = require('app')
+
 function StringToUTF8Bytes(str) {
     const utf8Bytes = [];
     for (let i = 0; i < str.length; i++) {
@@ -100,7 +103,7 @@ function fclose(stream) {
 }
 
 function main() {
-    const res = getResource('ui')
+    const res = app.getResource('ui')
     const path = mallocString(res + '/ui_main.json');
     const mode = mallocString('r');
     const stream = fopen(path, mode);

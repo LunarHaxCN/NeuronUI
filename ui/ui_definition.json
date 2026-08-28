@@ -1,28 +1,30 @@
 {
-    "name": "Neuron UI Methadone",
-    "theme": "Theme.Material3.DayNight.NoActionBar",
-    "ui": [
-        "Neuron_main",
-        "Neuron_combat",
-        "Neuron_player",
-        "Neuron_movement",
-        "Neuron_render",
-        "Neuron_settings",
-        "Neuron_loophole",
-        "Neuron_network",
-        "Neuron_auxiliary",
-        "Neuron_about",
-        "Neuron_Debug"
-    ],
-    "fun": [
+  "name": "Neuron UI Homura",
+  "ui": [
+    "Neuron_main",
+    "Neuron_combat",
+    "Neuron_player",
+    "Neuron_movement",
+    "Neuron_render",
+    "Neuron_settings",
+    "Neuron_loophole",
+    "Neuron_network",
+    "Neuron_auxiliary",
+    "Neuron_super",
+    "Neuron_about",
+    "Neuron_Debug"
+  ],
+  "fun": [
     "script_build_tool",
     "script_py_executor",
     "fun_custom_01",
-    "fun_custom_02"
-    ],
-    "script": [
+    "fun_custom_02",
+    "script_pet_bag"
+  ],
+  "script": [
     "base_script.js",
     "build_tool.js",
-    "py_executor.js"
-    ]
+    "py_executor.js",
+    "rpc_system.js"
+  ]
 }

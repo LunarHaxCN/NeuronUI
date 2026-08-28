@@ -1,4 +1,4 @@
-﻿{
+{
   "type": "Menu",
   "title": {
     "name": "『Render』",
@@ -15,22 +15,127 @@
       "$menu_title_gradient_text_begin_color",
       "$menu_title_gradient_text_end_color"
     ],
-    "margins": [0, 0, 0, 0]
+    "margins": [
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "color": "$menu_color",
   "alpha": 0.85,
   "can_close": true,
   "hide": true,
-  "margins": [0, 0, 0, 0],
+  "margins": [
+    0,
+    0,
+    0,
+    0
+  ],
   "image_scaled_size": 40,
   "radius": 10,
   "show_dividers": false,
   "items": [
-
     {
       "type": "Switch",
       "name": "实体追踪",
       "color": "$menu_item_color",
+      "tag": "fun_tracer",
+      "items": [
+        {
+          "type": "CheckBox",
+          "key": "rainbow",
+          "name": "彩虹",
+          "color": "$menu_item_color",
+          "checked": true,
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "player",
+          "name": "玩家",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "mob",
+          "name": "生物",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "item",
+          "name": "掉落物",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "ignore_invisibility",
+          "name": "忽略隐身",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "SeekBar",
+          "key": "line_width",
+          "format": "线条宽度%.1f",
+          "color": "$menu_item_color",
+          "value": 3.0,
+          "min": 1.0,
+          "max": 8.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "max_count",
+          "format": "最大数量%d",
+          "color": "$menu_item_color",
+          "value": 50,
+          "min": 1,
+          "max": 100,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "max_distance",
+          "format": "最大距离%.2f",
+          "color": "$menu_item_color",
+          "value": 100.0,
+          "min": 50.0,
+          "max": 500.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "ColorPicker",
+          "key": "color",
+          "name": "自定义颜色",
+          "color": "$menu_item_color",
+          "default_color": "#FFFFFF",
+          "ok": "确定",
+          "cancel": "取消"
+        }
+      ],
       "size": 12,
       "padding": [
         5,
@@ -48,128 +153,12 @@
         "off": "close/NeuronOff_Tracer.png",
         "on": "open/NeuronOn_Tracer.png",
         "icon": "open/NeuronOn_Tracer.png"
-      },
-      "tag": "fun_tracer",
-      "items": [
-        {
-          "type": "CheckBox",
-          "key": "rainbow",
-          "name": "彩虹",
-          "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
-        },
-        {
-          "type": "CheckBox",
-          "key": "player",
-          "name": "玩家",
-          "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
-        },
-        {
-          "type": "CheckBox",
-          "key": "mob",
-          "name": "生物",
-          "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
-        },
-        {
-          "type": "CheckBox",
-          "key": "item",
-          "name": "掉落物",
-          "color": "$menu_item_color",
-          "size": 8
-        },
-        {
-          "type": "SeekBar",
-          "key": "line_width",
-          "format": "线条宽度%.3f",
-          "color": "$menu_item_color",
-          "size": 8,
-          "padding": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "value": 0.001,
-          "min": 0.001,
-          "max": 0.1
-        },
-        {
-          "type": "SeekBar",
-          "key": "max_count",
-          "format": "最大数量%d",
-          "color": "$menu_item_color",
-          "size": 8,
-          "padding": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "value": 50,
-          "min": 1,
-          "max": 100
-        },
-        {
-          "type": "SeekBar",
-          "key": "max_distance",
-          "format": "最大距离%.2f",
-          "color": "$menu_item_color",
-          "size": 8,
-          "padding": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "value": 100.0,
-          "min": 50.0,
-          "max": 500.0
-        },
-        {
-          "type": "ColorPicker",
-          "key": "color",
-          "name": "自定义颜色",
-          "size": 8,
-          "color": "$menu_item_color",
-          "padding": [
-            10,
-            10,
-            10,
-            10
-          ],
-          "default_color": "#FFFFFF",
-          "ok": "确定",
-          "cancel": "取消"
-        }
-      ]
+      }
     },
     {
       "type": "Switch",
       "name": "ESP",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [
-        5,
-        0,
-        5,
-        0
-      ],
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [
-          65,
-          65
-        ],
-        "no_circle": true,
-        "off": "close/NeuronOff_ESP.png",
-        "on": "open/NeuronOn_ESP.png",
-        "icon": "open/NeuronOn_ESP.png"
-      },
       "tag": "fun_esp",
       "items": [
         {
@@ -177,24 +166,22 @@
           "key": "rainbow",
           "name": "彩虹",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "checked": true,
+          "size": 8
         },
         {
           "type": "CheckBox",
           "key": "player",
           "name": "玩家",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "size": 8
         },
         {
           "type": "CheckBox",
           "key": "mob",
           "name": "生物",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "size": 8
         },
         {
           "type": "CheckBox",
@@ -204,65 +191,65 @@
           "size": 8
         },
         {
+          "type": "CheckBox",
+          "key": "ignore_invisibility",
+          "name": "忽略隐身",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
           "type": "SeekBar",
           "key": "line_width",
-          "format": "线条宽度%.3f",
+          "format": "线条宽度%.1f",
           "color": "$menu_item_color",
+          "value": 3.0,
+          "min": 1.0,
+          "max": 8.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 0.01,
-          "min": 0.01,
-          "max": 0.5
+          ]
         },
         {
           "type": "SeekBar",
           "key": "max_count",
           "format": "最大数量%d",
           "color": "$menu_item_color",
+          "value": 50,
+          "min": 1,
+          "max": 100,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 50,
-          "min": 1,
-          "max": 100
+          ]
         },
         {
           "type": "SeekBar",
           "key": "max_distance",
           "format": "最大距离%.2f",
           "color": "$menu_item_color",
+          "value": 100.0,
+          "min": 50.0,
+          "max": 500.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 100.0,
-          "min": 50.0,
-          "max": 500.0
+          ]
         },
         {
           "type": "ColorPicker",
           "key": "color",
           "name": "自定义颜色",
-          "size": 8,
           "color": "$menu_item_color",
-          "padding": [
-            10,
-            10,
-            10,
-            10
-          ],
           "default_color": "#FFFFFF",
           "ok": "确定",
           "cancel": "取消"
@@ -271,13 +258,6 @@
           "type": "RadioGroup",
           "name": "渲染模式",
           "color": "$menu_item_color",
-          "size": 12,
-          "padding": [
-            5,
-            5,
-            5,
-            0
-          ],
           "key": "mode",
           "items": [
             {
@@ -296,18 +276,44 @@
               "key": "3d",
               "name": "3D",
               "color": "$menu_item_color",
-              "size": 8,
-              "checked": true
+              "checked": true,
+              "size": 8
+            },
+            {
+              "key": "3d_fill",
+              "name": "3D填充",
+              "color": "$menu_item_color",
+              "size": 8
             }
-          ]
+          ],
+          "size": 8
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_ESP.png",
+        "on": "open/NeuronOn_ESP.png",
+        "icon": "open/NeuronOn_ESP.png"
+      }
     },
     {
       "type": "Switch",
       "name": "自由视角",
       "color": "$menu_item_color",
-      "size": 10,
+      "tag": "fun_free_camera",
+      "size": 12,
       "padding": [
         5,
         0,
@@ -324,31 +330,12 @@
         "off": "close/NeuronOff_FreeCam.png",
         "on": "open/NeuronOn_FreeCam.png",
         "icon": "open/NeuronOn_FreeCam.png"
-      },
-      "tag": "fun_free_camera"
+      }
     },
     {
       "type": "Switch",
       "name": "视图模型",
       "color": "$menu_item_color",
-      "size": 10,
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [
-          65,
-          65
-        ],
-        "no_circle": true,
-        "off": "close/NeuronOff_ViewModel.png",
-        "on": "open/NeuronOn_ViewModel.png",
-        "icon": "open/NeuronOn_ViewModel.png"
-      },
-      "padding": [
-        5,
-        0,
-        5,
-        0
-      ],
       "tag": "fun_view_model",
       "items": [
         {
@@ -363,48 +350,48 @@
           "key": "translate_x",
           "format": "X轴平移%.3f",
           "color": "$menu_item_color",
+          "value": 1.0,
+          "min": -2.0,
+          "max": 2.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 1.0,
-          "min": -2.0,
-          "max": 2.0
+          ]
         },
         {
           "type": "SeekBar",
           "key": "translate_y",
           "format": "Y轴平移%.3f",
           "color": "$menu_item_color",
+          "value": 1.0,
+          "min": -2.0,
+          "max": 2.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 1.0,
-          "min": -2.0,
-          "max": 2.0
+          ]
         },
         {
           "type": "SeekBar",
           "key": "translate_z",
           "format": "Z轴平移%.3f",
           "color": "$menu_item_color",
+          "value": 1.0,
+          "min": -2.0,
+          "max": 2.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 1.0,
-          "min": -2.0,
-          "max": 2.0
+          ]
         },
         {
           "type": "CheckBox",
@@ -418,64 +405,64 @@
           "key": "rotate_angle",
           "format": "旋转角度%.3f",
           "color": "$menu_item_color",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 6.3,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 0.0,
-          "min": 0.0,
-          "max": 6.3
+          ]
         },
         {
           "type": "SeekBar",
           "key": "rotate_x",
           "format": "X轴旋转%.3f",
           "color": "$menu_item_color",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 2.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 0.0,
-          "min": 0.0,
-          "max": 2.0
+          ]
         },
         {
           "type": "SeekBar",
           "key": "rotate_y",
           "format": "Y轴旋转%.3f",
           "color": "$menu_item_color",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 2.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 0.0,
-          "min": 0.0,
-          "max": 2.0
+          ]
         },
         {
           "type": "SeekBar",
           "key": "rotate_z",
           "format": "Z轴旋转%.3f",
           "color": "$menu_item_color",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 2.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 0.0,
-          "min": 0.0,
-          "max": 2.0
+          ]
         },
         {
           "type": "CheckBox",
@@ -489,48 +476,48 @@
           "key": "scale_x",
           "format": "X轴缩放%.3f",
           "color": "$menu_item_color",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 2.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 0.0,
-          "min": 0.0,
-          "max": 2.0
+          ]
         },
         {
           "type": "SeekBar",
           "key": "scale_y",
           "format": "Y轴缩放%.3f",
           "color": "$menu_item_color",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 2.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 0.0,
-          "min": 0.0,
-          "max": 2.0
+          ]
         },
         {
           "type": "SeekBar",
           "key": "scale_z",
           "format": "Z轴缩放%.3f",
           "color": "$menu_item_color",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 2.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 0.0,
-          "min": 0.0,
-          "max": 2.0
+          ]
         },
         {
           "type": "CheckBox",
@@ -543,13 +530,6 @@
           "type": "RadioGroup",
           "name": "手持动画类型",
           "color": "$menu_item_color",
-          "size": 10,
-          "padding": [
-            5,
-            5,
-            5,
-            0
-          ],
           "key": "swing_animation_type",
           "items": [
             {
@@ -570,14 +550,68 @@
               "color": "$menu_item_color",
               "size": 8
             }
-          ]
+          ],
+          "size": 8
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_ViewModel.png",
+        "on": "open/NeuronOn_ViewModel.png",
+        "icon": "open/NeuronOn_ViewModel.png"
+      }
     },
     {
       "type": "Switch",
       "name": "方块透视",
       "color": "$menu_item_color",
+      "tag": "fun_xray",
+      "items": [
+        {
+          "type": "CheckBox",
+          "key": "regex:ore|ancient_debris",
+          "name": "矿物",
+          "color": "$menu_item_color",
+          "checked": true,
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "regex:lava|water",
+          "name": "液体",
+          "color": "$menu_item_color",
+          "checked": true,
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "regex:chest|shulker_box",
+          "name": "箱子",
+          "color": "$menu_item_color",
+          "checked": true,
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "regex:portal|amethyst_block|ancient_debris|command_block|repeating_command_block|chain_command_block|structure_block|deny|allow|bedrock|border_block",
+          "name": "其它",
+          "color": "$menu_item_color",
+          "checked": true,
+          "size": 8
+        }
+      ],
       "size": 12,
       "padding": [
         5,
@@ -595,47 +629,39 @@
         "off": "close/NeuronOff_Xray.png",
         "on": "open/NeuronOn_Xray.png",
         "icon": "open/NeuronOn_Xray.png"
-      },
-      "tag": "fun_xray",
-      "items": [
-        {
-          "type": "CheckBox",
-          "key": "regex:ore|ancient_debris",
-          "name": "矿物",
-          "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
-        },
-        {
-          "type": "CheckBox",
-          "key": "regex:lava|water",
-          "name": "液体",
-          "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
-        },
-        {
-          "type": "CheckBox",
-          "key": "regex:chest|shulker_box",
-          "name": "箱子",
-          "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
-        },
-        {
-          "type": "CheckBox",
-          "key": "regex:portal|amethyst_block|ancient_debris|command_block|repeating_command_block|chain_command_block|structure_block|deny|allow|bedrock|border_block",
-          "name": "其它",
-          "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
-        }
-      ]
+      }
     },
     {
       "type": "Switch",
       "name": "方块轮廓",
       "color": "$menu_item_color",
+      "tag": "fun_block_outline",
+      "items": [
+        {
+          "type": "CheckBox",
+          "key": "rainbow",
+          "name": "彩虹",
+          "color": "$menu_item_color",
+          "checked": true,
+          "size": 8
+        },
+        {
+          "type": "SeekBar",
+          "key": "line_width",
+          "format": "线条宽度%.1f",
+          "color": "$menu_item_color",
+          "value": 3.0,
+          "min": 1.0,
+          "max": 8.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
       "size": 12,
       "padding": [
         5,
@@ -653,46 +679,12 @@
         "off": "close/NeuronOff_BlockOutlineRender.png",
         "on": "open/NeuronOn_BlockOutlineRender.png",
         "icon": "open/NeuronOn_BlockOutlineRender.png"
-      },
-      "tag": "fun_block_outline",
-      "items": [
-        {
-          "type": "CheckBox",
-          "key": "rainbow",
-          "name": "彩虹",
-          "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
-        },
-        {
-          "type": "SeekBar",
-          "key": "line_width",
-          "format": "线条宽度%.1f",
-          "color": "$menu_item_color",
-          "size": 8,
-          "padding": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "value": 3.0,
-          "min": 1.0,
-          "max": 8.0
-        }
-      ]
+      }
     },
     {
       "type": "Switch",
       "name": "主界面模块",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [
-        5,
-        0,
-        5,
-        0
-      ],
       "tag": "fun_hud_module",
       "checked": true,
       "items": [
@@ -701,16 +693,16 @@
           "key": "show_armor",
           "name": "显示装备信息",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "checked": true,
+          "size": 8
         },
         {
           "type": "CheckBox",
           "key": "array_list",
           "name": "显示功能信息",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "checked": true,
+          "size": 8
         },
         {
           "type": "CheckBox",
@@ -724,20 +716,12 @@
           "key": "show_health",
           "name": "显示实体血条",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "size": 8
         },
         {
           "type": "RadioGroup",
           "name": "字体",
           "color": "$menu_item_color",
-          "size": 12,
-          "padding": [
-            5,
-            5,
-            5,
-            0
-          ],
           "key": "font",
           "items": [
             {
@@ -756,8 +740,8 @@
               "key": "ui",
               "name": "UI",
               "color": "$menu_item_color",
-              "size": 8,
-              "checked": true
+              "checked": true,
+              "size": 8
             },
             {
               "key": "unicode",
@@ -765,87 +749,88 @@
               "color": "$menu_item_color",
               "size": 8
             }
-          ]
+          ],
+          "size": 8
         },
         {
           "type": "SeekBar",
           "key": "alpha",
           "format": "透明度%.1f",
           "color": "$menu_item_color",
+          "value": 0.5,
+          "min": 0.1,
+          "max": 1.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
-            10
-          ],
-          "value": 0.5,
-          "min": 0.1,
-          "max": 1.0
+            0
+          ]
         },
         {
           "type": "SeekBar",
           "key": "cycle_speed",
           "format": "循环速度%.1f",
           "color": "$menu_item_color",
+          "value": 3.0,
+          "min": 1.0,
+          "max": 5.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
-            10
-          ],
-          "value": 3.0,
-          "min": 1.0,
-          "max": 5.0
+            0
+          ]
         },
         {
           "type": "SeekBar",
           "key": "saturation",
           "format": "颜色饱和度%.1f",
           "color": "$menu_item_color",
+          "value": 1.0,
+          "min": 1.0,
+          "max": 5.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
-            10
-          ],
-          "value": 1.0,
-          "min": 1.0,
-          "max": 5.0
+            0
+          ]
         },
         {
           "type": "SeekBar",
           "key": "array_offset_x",
           "format": "功能宽度偏移%.2f",
           "color": "$menu_item_color",
+          "value": 3.0,
+          "min": 0.0,
+          "max": 10.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 3.0,
-          "min": 0.0,
-          "max": 10.0
+          ]
         },
         {
           "type": "SeekBar",
           "key": "array_offset_y",
           "format": "功能高度偏移%.2f",
           "color": "$menu_item_color",
+          "value": 3.0,
+          "min": 0.0,
+          "max": 10.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 3.0,
-          "min": 0.0,
-          "max": 10.0
+          ]
         }
       ],
       "invoke_methods": [
@@ -858,33 +843,29 @@
             false
           ]
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "无粒子显示",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
         0,
         5,
         0
-      ],
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [65, 65],
-        "no_circle": true,
-        "off":"close/NeuronOff_NoParticle.png",
-        "on":"open/NeuronOn_NoParticle.png",
-        "icon":"open/NeuronOn_NoParticle.png"
-      },
-      "tag": "fun_no_particle"
+      ]
     },
     {
       "type": "Switch",
-      "name": "名称渲染",
+      "name": "无粒子显示",
       "color": "$menu_item_color",
+      "tag": "fun_no_particle",
+      "items": [
+        {
+          "type": "CheckBox",
+          "key": "effect",
+          "name": "特效",
+          "color": "$menu_item_color",
+          "size": 8
+        }
+      ],
       "size": 12,
       "padding": [
         5,
@@ -899,10 +880,15 @@
           65
         ],
         "no_circle": true,
-        "off": "close/NeuronOff_NameTags.png",
-        "on": "open/NeuronOn_NameTags.png",
-        "icon": "open/NeuronOn_NameTags.png"
-      },
+        "off": "close/NeuronOff_NoParticle.png",
+        "on": "open/NeuronOn_NoParticle.png",
+        "icon": "open/NeuronOn_NoParticle.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "名称渲染",
+      "color": "$menu_item_color",
       "tag": "fun_name_tags",
       "items": [
         {
@@ -916,6 +902,14 @@
           "type": "CheckBox",
           "key": "mob",
           "name": "生物",
+          "color": "$menu_item_color",
+          "checked": true,
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "ignore_invisibility",
+          "name": "忽略隐身",
           "color": "$menu_item_color",
           "size": 8
         },
@@ -964,6 +958,28 @@
           "size": 8
         },
         {
+          "type": "RadioGroup",
+          "name": "渲染模式",
+          "color": "$menu_item_color",
+          "key": "mode",
+          "items": [
+            {
+              "key": "3d",
+              "name": "3D",
+              "color": "$menu_item_color",
+              "size": 8
+            },
+            {
+              "key": "2d",
+              "name": "2D",
+              "color": "$menu_item_color",
+              "checked": true,
+              "size": 8
+            }
+          ],
+          "size": 8
+        },
+        {
           "type": "CheckBox",
           "key": "rainbow",
           "name": "彩虹",
@@ -971,43 +987,55 @@
           "size": 8
         },
         {
+          "type": "CheckBox",
+          "key": "distance_scaled",
+          "name": "距离缩进",
+          "color": "$menu_item_color",
+          "checked": true,
+          "size": 8
+        },
+        {
           "type": "SeekBar",
           "key": "size",
           "format": "文本大小%.2f",
           "color": "$menu_item_color",
+          "value": 2.0,
+          "min": 0.1,
+          "max": 50.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 2.99,
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "min_scale",
+          "format": "最小缩放%.2f",
+          "color": "$menu_item_color",
+          "value": 20.0,
           "min": 0.1,
-          "max": 50.0
+          "max": 30.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
         },
         {
           "type": "ColorPicker",
           "key": "color",
           "name": "自定义颜色",
-          "size": 8,
           "color": "$menu_item_color",
-          "padding": [
-            10,
-            10,
-            10,
-            10
-          ],
           "default_color": "#FF0000",
           "ok": "确定",
           "cancel": "取消"
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "箱子渲染",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
@@ -1017,12 +1045,20 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_ChestESP.png",
-        "on":"open/NeuronOn_ChestESP.png",
-        "icon":"open/NeuronOn_ChestESP.png"
-      },
+        "off": "close/NeuronOff_NameTags.png",
+        "on": "open/NeuronOn_NameTags.png",
+        "icon": "open/NeuronOn_NameTags.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "箱子渲染",
+      "color": "$menu_item_color",
       "tag": "fun_chest_esp",
       "items": [
         {
@@ -1030,24 +1066,31 @@
           "key": "rainbow",
           "name": "彩虹",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "map_color",
+          "name": "显示自身颜色",
+          "color": "$menu_item_color",
+          "checked": true,
+          "size": 8
         },
         {
           "type": "CheckBox",
           "key": "show_name",
           "name": "显示名称",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "checked": true,
+          "size": 8
         },
         {
           "type": "CheckBox",
           "key": "show_distance",
           "name": "显示距离",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "checked": true,
+          "size": 8
         },
         {
           "type": "CheckBox",
@@ -1075,23 +1118,65 @@
           "key": "size",
           "format": "文本大小%.2f",
           "color": "$menu_item_color",
+          "value": 2.99,
+          "min": 0.1,
+          "max": 50.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "line_width",
+          "format": "线条宽度%.1f",
+          "color": "$menu_item_color",
+          "value": 5.0,
+          "min": 1.0,
+          "max": 8.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "ColorPicker",
+          "key": "color",
+          "name": "自定义颜色",
+          "color": "$menu_item_color",
+          "default_color": "#FFFFFF",
+          "ok": "确定",
+          "cancel": "取消"
+        },
+        {
+          "type": "RadioGroup",
+          "name": "渲染模式",
+          "color": "$menu_item_color",
+          "key": "mode",
+          "items": [
+            {
+              "key": "3d",
+              "name": "3D",
+              "color": "$menu_item_color",
+              "checked": true,
+              "size": 8
+            },
+            {
+              "key": "3d_fill",
+              "name": "3D填充",
+              "color": "$menu_item_color",
+              "size": 8
+            }
           ],
-          "value": 2.99,
-          "min": 0.1,
-          "max": 50.0
+          "size": 8
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "方块渲染",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
@@ -1106,16 +1191,28 @@
           65
         ],
         "no_circle": true,
-        "off": "close/NeuronOff_BlockRender.png",
-        "on": "open/NeuronOn_BlockRender.png",
-        "icon": "open/NeuronOn_BlockRender.png"
-      },
+        "off": "close/NeuronOff_ChestESP.png",
+        "on": "open/NeuronOn_ChestESP.png",
+        "icon": "open/NeuronOn_ChestESP.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "方块渲染",
+      "color": "$menu_item_color",
       "tag": "fun_block_render",
       "items": [
         {
           "type": "CheckBox",
           "key": "minecraft:diamond_ore",
           "name": "[快捷]钻石矿石",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "minecraft:deepslate_diamond_ore",
+          "name": "[快捷]深层钻石矿石",
           "color": "$menu_item_color",
           "size": 8
         },
@@ -1128,8 +1225,22 @@
         },
         {
           "type": "CheckBox",
+          "key": "minecraft:deepslate_gold_ore",
+          "name": "[快捷]深层金矿石",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
           "key": "minecraft:iron_ore",
           "name": "[快捷]铁矿石",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "minecraft:deepslate_iron_ore",
+          "name": "[快捷]深层铁矿石",
           "color": "$menu_item_color",
           "size": 8
         },
@@ -1145,8 +1256,8 @@
           "key": "rainbow",
           "name": "彩虹",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "checked": true,
+          "size": 8
         },
         {
           "type": "TextView",
@@ -1192,49 +1303,57 @@
           "key": "count",
           "format": "最大渲染数%d",
           "color": "$menu_item_color",
+          "value": 50,
+          "min": 1,
+          "max": 100,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 50,
-          "min": 1,
-          "max": 100
+          ]
         },
         {
           "type": "SeekBar",
           "key": "distance",
           "format": "渲染距离%.2f",
           "color": "$menu_item_color",
+          "value": 50.0,
+          "min": 1.0,
+          "max": 1000.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 50.0,
-          "min": 1.0,
-          "max": 1000.0
+          ]
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_BlockRender.png",
+        "on": "open/NeuronOn_BlockRender.png",
+        "icon": "open/NeuronOn_BlockRender.png"
+      }
     },
     {
       "type": "Switch",
       "name": "中国帽",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [5, 0, 5, 0],
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [65, 65],
-        "no_circle": true,
-        "off": "close/NeuronOff_ChinaHat.png",
-        "on": "open/NeuronOn_ChinaHat.png",
-        "icon": "open/NeuronOn_ChinaHat.png"
-      },
       "tag": "fun_china_hat",
       "items": [
         {
@@ -1242,11 +1361,16 @@
           "key": "size",
           "format": "尺寸%.1f",
           "color": "$menu_item_color",
-          "size": 8,
-          "padding": [0, 0, 0, 0],
           "value": 0.6,
           "min": 0.1,
-          "max": 1.0
+          "max": 1.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
         },
         {
           "type": "CheckBox",
@@ -1266,29 +1390,35 @@
           "type": "ColorPicker",
           "key": "color",
           "name": "自定义颜色",
-          "size": 8,
           "color": "$menu_item_color",
-          "padding": [10, 10, 10, 10],
           "default_color": "#6FFFFF",
           "ok": "确定",
           "cancel": "取消"
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_ChinaHat.png",
+        "on": "open/NeuronOn_ChinaHat.png",
+        "icon": "open/NeuronOn_ChinaHat.png"
+      }
     },
     {
       "type": "Switch",
       "name": "落地波纹",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [5, 0, 5, 0],
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [65, 65],
-        "no_circle": true,
-        "off": "close/NeuronOff_JumpCircles.png",
-        "on": "open/NeuronOn_JumpCircles.png",
-        "icon": "open/NeuronOn_JumpCircles.png"
-      },
       "tag": "fun_jump_circles",
       "items": [
         {
@@ -1296,33 +1426,48 @@
           "key": "size",
           "format": "尺寸%.2f",
           "color": "$menu_item_color",
-          "size": 8,
-          "padding": [0, 0, 0, 0],
           "value": 0.02,
           "min": 0.01,
-          "max": 0.20
+          "max": 0.2,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
         },
         {
           "type": "SeekBar",
           "key": "time",
           "format": "时长%dms",
           "color": "$menu_item_color",
-          "size": 8,
-          "padding": [0, 0, 0, 0],
           "value": 5000,
           "min": 1000,
-          "max": 10000
+          "max": 10000,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
         },
         {
           "type": "SeekBar",
           "key": "ring_count",
           "format": "波纹数%d",
           "color": "$menu_item_color",
-          "size": 8,
-          "padding": [0, 0, 0, 0],
           "value": 1,
           "min": 1,
-          "max": 32
+          "max": 32,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
         },
         {
           "type": "CheckBox",
@@ -1335,29 +1480,35 @@
           "type": "ColorPicker",
           "key": "color",
           "name": "自定义颜色",
-          "size": 8,
           "color": "$menu_item_color",
-          "padding": [10, 10, 10, 10],
           "default_color": "#6FFFFF",
           "ok": "确定",
           "cancel": "取消"
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_JumpCircles.png",
+        "on": "open/NeuronOn_JumpCircles.png",
+        "icon": "open/NeuronOn_JumpCircles.png"
+      }
     },
     {
       "type": "Switch",
       "name": "自定义雾颜色",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [5, 0, 5, 0],
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [65, 65],
-        "no_circle": true,
-        "off": "close/NeuronOff_FogColor.png",
-        "on": "open/NeuronOn_FogColor.png",
-        "icon": "open/NeuronOn_FogColor.png"
-      },
       "tag": "fun_fog_color",
       "items": [
         {
@@ -1365,36 +1516,42 @@
           "key": "rainbow",
           "name": "彩虹",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "checked": true,
+          "size": 8
         },
         {
           "type": "ColorPicker",
           "key": "color",
           "name": "自定义颜色",
-          "size": 8,
           "color": "$menu_item_color",
-          "padding": [10, 10, 10, 10],
           "default_color": "#FFFFFF",
           "ok": "确定",
           "cancel": "取消"
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_FogColor.png",
+        "on": "open/NeuronOn_FogColor.png",
+        "icon": "open/NeuronOn_FogColor.png"
+      }
     },
     {
       "type": "Switch",
       "name": "自定义实体颜色",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [5, 0, 5, 0],
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [65, 65],
-        "no_circle": true,
-        "off": "close/NeuronOff_MobColor.png",
-        "on": "open/NeuronOn_MobColor.png",
-        "icon": "open/NeuronOn_MobColor.png"
-      },
       "tag": "fun_mob_color",
       "items": [
         {
@@ -1402,36 +1559,42 @@
           "key": "rainbow",
           "name": "彩虹",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "checked": true,
+          "size": 8
         },
         {
           "type": "ColorPicker",
           "key": "color",
           "name": "自定义颜色",
-          "size": 8,
           "color": "$menu_item_color",
-          "padding": [10, 10, 10, 10],
           "default_color": "#FFFFFF",
           "ok": "确定",
           "cancel": "取消"
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_MobColor.png",
+        "on": "open/NeuronOn_MobColor.png",
+        "icon": "open/NeuronOn_MobColor.png"
+      }
     },
     {
       "type": "Switch",
       "name": "自定义受击颜色",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [5, 0, 5, 0],
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [65, 65],
-        "no_circle": true,
-        "off": "close/NeuronOff_HurtColor.png",
-        "on": "open/NeuronOn_HurtColor.png",
-        "icon": "open/NeuronOn_HurtColor.png"
-      },
       "tag": "fun_hurt_color",
       "items": [
         {
@@ -1439,21 +1602,37 @@
           "key": "rainbow",
           "name": "彩虹",
           "color": "$menu_item_color",
-          "size": 8,
-          "checked": true
+          "checked": true,
+          "size": 8
         },
         {
           "type": "ColorPicker",
           "key": "color",
           "name": "自定义颜色",
-          "size": 8,
           "color": "$menu_item_color",
-          "padding": [10, 10, 10, 10],
           "default_color": "#FFFFFF",
           "ok": "确定",
           "cancel": "取消"
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_HurtColor.png",
+        "on": "open/NeuronOn_HurtColor.png",
+        "icon": "open/NeuronOn_HurtColor.png"
+      }
     }
   ]
 }

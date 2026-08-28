@@ -1,66 +1,79 @@
 /**
  * @author: WhiteWallTeam
- * @date: 2025.10.13
+ * @date: 2026.6.30
  * @description: ImGui 控制面板
  */
 
- // 定义数据对象
-let settings = {
-    showDemo: false,
-    volume: 0.75,
-    username: "Alice",
-    index: 0,
-};
+const gui = require('ImGui');
+
+const showDemo = new gui.AccessValue(false);
+const inputValue = new gui.AccessValue('');
+const floatValue = new gui.AccessValue(0.0, 'float');
+const intValue = new gui.AccessValue(0);
+const colorValue = new gui.Tuple(0.5, 0.5, 0.5, 1.0);
+const comboIndex = new gui.AccessValue(0);
 
 function onImGuiRenderEvent() {
-    ImGui.Begin("控制面板");
+    gui.Begin("控制面板");
 
-    // 显示 demo 窗口切换
-    if (ImGui.Checkbox("显示 Demo 窗口", settings, "showDemo")) {
-        console.log("是否显示 Demo:", settings.showDemo);
+    if (gui.Checkbox("显示 Demo 窗口", showDemo)) {
+        console.log("是否显示 Demo:", showDemo.value);
     }
 
-    // 用户名输入框
-    ImGui.InputText("用户名", settings, "username");
+    if (gui.InputText("输入值", inputValue)) {
+        console.log("输入值:", inputValue.value);
+    }
 
-    // 音量滑块
-    ImGui.SliderFloat("音量", settings, "volume", 0.0, 1.0);
-    ImGui.SliderInt("Integer Slider", settings, "value", 0, 100);
+    if (gui.SliderFloat("浮点数", floatValue, 0.0, 1.0)) {
+        console.log("浮点数:", floatValue.value);
+    }
+    if (gui.SliderInt("整数", intValue, 0, 100)) {
+        console.log("整数:", intValue.value);
+    }
 
-    if (ImGui.Button("Click Me")) {
+    if (gui.Button("Click Me")) {
         console.log("Clicked!");
     }
 
     // Color Picker
-    ImGui.ColorEdit3("Color", settings, ["r", "g", "b"]);
-
-    let items = ["Item 1", "Item 2", "Item 3"];
-    ImGui.Combo("Options", settings, items, "index");
-
-
-     // 让下一个控件与前一个控件在同一行显示
-    ImGui.Button("Button 1");
-    ImGui.SameLine();
-    ImGui.Button("Button 2");
-    if (ImGui.Button("Button 3")) {
-        console.log(`Button 3 clicked! ${settings}`,settings);
+    if (gui.ColorEdit("Color", colorValue)) {
+        console.log("Color:", colorValue.value);
     }
 
-    if (ImGui.BeginTabBar("MyTabs")) {
-        if (ImGui.BeginTabItem("Tab A")) {
-            ImGui.Text("This is Tab A");
-            ImGui.EndTabItem();
-        }
-        if (ImGui.BeginTabItem("Tab B")) {
-            ImGui.Text("This is Tab B");
-            ImGui.EndTabItem();
-        }
-        ImGui.EndTabBar();
+    if (gui.Combo("Options", comboIndex, ["Item 1", "Item 2", "Item 3"])) {
+        console.log("Combo Index:", comboIndex.value);
     }
-    ImGui.End();
+
+    // 让下一个控件与前一个控件在同一行显示
+    gui.Button("Button 1");
+    gui.SameLine();
+    gui.Button("Button 2");
+    gui.SameLine();
+    gui.Button("Button 3")
+
+    if (gui.BeginTabBar("MyTabs")) {
+        if (gui.BeginTabItem("Tab A")) {
+            gui.Text("This is Tab A");
+            gui.EndTabItem();
+        }
+        if (gui.BeginTabItem("Tab B")) {
+            gui.Text("This is Tab B");
+            gui.EndTabItem();
+        }
+        gui.EndTabBar();
+    }
+    gui.End();
 
     // 可选显示 ImGui 自带的 demo 窗口
-    if (settings.showDemo) {
-        ImGui.ShowDemoWindow();
+    if (showDemo.value) {
+        gui.ShowDemoWindow();
     }
+
+    //gui.ShowStyleSelector('Style Selector');
+
+    const drawList = gui.GetBackgroundDrawList();
+
+    const color = gui.GetColorU32FromVec4(colorValue);
+
+    drawList.AddLine({x: 100, y: 100}, {x: 200, y: 200}, color);
 }

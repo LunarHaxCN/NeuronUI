@@ -1,4 +1,4 @@
-﻿{
+{
   "type": "Menu",
   "title": {
     "name": "『Auxiliary』",
@@ -15,13 +15,23 @@
       "$menu_title_gradient_text_begin_color",
       "$menu_title_gradient_text_end_color"
     ],
-    "margins": [0, 0, 0, 0]
+    "margins": [
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "color": "$menu_color",
   "alpha": 0.85,
   "can_close": true,
   "hide": true,
-  "margins": [0, 0, 0, 0],
+  "margins": [
+    0,
+    0,
+    0,
+    0
+  ],
   "image_scaled_size": 40,
   "radius": 10,
   "show_dividers": false,
@@ -39,11 +49,14 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_NoWeb.png",
-        "on":"open/NeuronOn_NoWeb.png",
-        "icon":"open/NeuronOn_NoWeb.png"
+        "off": "close/NeuronOff_NoWeb.png",
+        "on": "open/NeuronOn_NoWeb.png",
+        "icon": "open/NeuronOn_NoWeb.png"
       },
       "tag": "fun_no_web"
     },
@@ -60,11 +73,14 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_NoSlowDown.png",
-        "on":"open/NeuronOn_NoSlowDown.png",
-        "icon":"open/NeuronOn_NoSlowDown.png"
+        "off": "close/NeuronOff_NoSlowDown.png",
+        "on": "open/NeuronOn_NoSlowDown.png",
+        "icon": "open/NeuronOn_NoSlowDown.png"
       },
       "tag": "fun_no_slow_down"
     },
@@ -72,21 +88,6 @@
       "type": "Switch",
       "name": "快速建造",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [
-        5,
-        0,
-        5,
-        0
-      ],
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [65, 65],
-        "no_circle": true,
-        "off":"close/NeuronOff_FastBuild.png",
-        "on":"open/NeuronOn_FastBuild.png",
-        "icon":"open/NeuronOn_FastBuild.png"
-      },
       "tag": "fun_fast_build",
       "items": [
         {
@@ -94,148 +95,143 @@
           "key": "mode",
           "name": "建造模式",
           "color": "$menu_item_color",
-          "size": 8,
           "items": [
             {
               "key": "fill",
               "name": "填充",
               "color": "$menu_item_color",
               "checked": true,
-              "size": 8,
-              "tip": "点击的两个方块位置会作为起点和终点"
+              "tip": "点击的两个方块位置会作为起点和终点",
+              "size": 8
             },
             {
               "key": "frame",
               "name": "框架",
               "color": "$menu_item_color",
-              "size": 8,
-              "tip": "点击的两个方块位置会作为起点和终点"
+              "tip": "点击的两个方块位置会作为起点和终点",
+              "size": 8
             },
             {
               "key": "hollow",
               "name": "空心",
               "color": "$menu_item_color",
-              "size": 8,
-              "tip": "点击的两个方块位置会作为起点和终点"
+              "tip": "点击的两个方块位置会作为起点和终点",
+              "size": 8
             },
             {
               "key": "pellet",
               "name": "圆球",
               "color": "$menu_item_color",
-              "size": 8,
-              "tip": "点击的位置会作为起点"
+              "tip": "点击的位置会作为起点",
+              "size": 8
             },
             {
               "key": "cylinder",
               "name": "圆柱",
               "color": "$menu_item_color",
-              "size": 8,
-              "tip": "点击的位置会作为起点"
+              "tip": "点击的位置会作为起点",
+              "size": 8
             },
             {
               "key": "cone",
               "name": "圆锥",
               "color": "$menu_item_color",
-              "size": 8,
-              "tip": "点击的位置会作为起点"
+              "tip": "点击的位置会作为起点",
+              "size": 8
             },
             {
               "key": "destroy",
               "name": "破坏",
               "color": "$menu_item_color",
-              "size": 8,
-              "tip": "点击的两个方块位置会作为起点和终点"
+              "tip": "点击的两个方块位置会作为起点和终点",
+              "size": 8
             }
-          ]
+          ],
+          "size": 8
         },
         {
           "type": "SeekBar",
           "key": "radius",
           "format": "圆半径%d",
           "color": "$menu_item_color",
+          "value": 5,
+          "min": 1,
+          "max": 100,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 5,
-          "min": 1,
-          "max": 100
+          ]
         },
         {
           "type": "SeekBar",
           "key": "height",
           "format": "圆高度%d",
           "color": "$menu_item_color",
+          "value": 10,
+          "min": 1,
+          "max": 100,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 10,
-          "min": 1,
-          "max": 100
+          ]
         },
         {
           "type": "CheckBox",
           "key": "solid",
           "name": "圆实心",
           "color": "$menu_item_color",
-          "size": 8,
-          "tip": "设置圆是否为实心体"
+          "tip": "设置圆是否为实心体",
+          "size": 8
         },
         {
           "type": "SeekBar",
           "key": "distance",
           "format": "操作距离%.2f",
           "color": "$menu_item_color",
+          "value": 6.5,
+          "min": 1.0,
+          "max": 12.0,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 6.5,
-          "min": 1.0,
-          "max": 12.0
+          ]
         },
         {
           "type": "CheckBox",
           "key": "retry",
           "name": "失败重试",
           "color": "$menu_item_color",
-          "size": 8,
           "checked": true,
-          "tip": "当放置/破坏时操作失败会尝试重新放置/破坏"
+          "tip": "当放置/破坏时操作失败会尝试重新放置/破坏",
+          "size": 8
         },
         {
           "type": "CheckBox",
           "key": "line_box",
           "name": "边界线盒",
           "color": "$menu_item_color",
-          "size": 8,
           "checked": true,
-          "tip": "在操作的区域边界线盒"
+          "tip": "在操作的区域边界线盒",
+          "size": 8
         },
         {
           "type": "CheckBox",
           "key": "pick",
           "name": "方块/生物选择",
           "color": "$menu_item_color",
-          "size": 8,
-          "tip": "点击方块/生物会获取对应的物品和刷怪蛋（必须先为创造模式）"
+          "tip": "点击方块/生物会获取对应的物品和刷怪蛋（必须先为创造模式）",
+          "size": 8
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "自动钓鱼",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
@@ -245,12 +241,20 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_AutoFish.png",
-        "on":"open/NeuronOn_AutoFish.png",
-        "icon":"open/NeuronOn_AutoFish.png"
-      },
+        "off": "close/NeuronOff_FastBuild.png",
+        "on": "open/NeuronOn_FastBuild.png",
+        "icon": "open/NeuronOn_FastBuild.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "自动钓鱼",
+      "color": "$menu_item_color",
       "tag": "fun_auto_fishing",
       "items": [
         {
@@ -258,23 +262,18 @@
           "key": "delay",
           "format": "抛竿延迟%d",
           "color": "$menu_item_color",
+          "value": 3,
+          "min": 1,
+          "max": 20,
           "size": 8,
           "padding": [
             0,
             0,
             0,
             0
-          ],
-          "value": 3,
-          "min": 1,
-          "max": 20
+          ]
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "背包移动",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
@@ -284,12 +283,20 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_InventoryMove.png",
-        "on":"open/NeuronOn_InventoryMove.png",
-        "icon":"open/NeuronOn_InventoryMove.png"
-      },
+        "off": "close/NeuronOff_AutoFish.png",
+        "on": "open/NeuronOn_AutoFish.png",
+        "icon": "open/NeuronOn_AutoFish.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "背包移动",
+      "color": "$menu_item_color",
       "tag": "fun_inventory_move",
       "items": [
         {
@@ -303,73 +310,68 @@
           "type": "TextView",
           "name": "合成栏左上格",
           "color": "$menu_item_color",
+          "key": "crafting_left_top",
           "size": 12,
           "padding": [
-            10,
             5,
-            10,
+            5,
+            5,
             5
-          ],
-          "key": "crafting_left_top"
+          ]
         },
         {
           "type": "TextView",
           "name": "合成栏右上格",
           "color": "$menu_item_color",
+          "key": "crafting_right_top",
           "size": 12,
           "padding": [
-            10,
             5,
-            10,
+            5,
+            5,
             5
-          ],
-          "key": "crafting_right_top"
+          ]
         },
         {
           "type": "TextView",
           "name": "合成栏左下格",
           "color": "$menu_item_color",
+          "key": "crafting_left_bottom",
           "size": 12,
           "padding": [
-            10,
             5,
-            10,
+            5,
+            5,
             5
-          ],
-          "key": "crafting_left_bottom"
+          ]
         },
         {
           "type": "TextView",
           "name": "合成栏右下格",
           "color": "$menu_item_color",
+          "key": "crafting_right_bottom",
           "size": 12,
           "padding": [
-            10,
             5,
-            10,
+            5,
+            5,
             5
-          ],
-          "key": "crafting_right_bottom"
+          ]
         },
         {
           "type": "TextView",
           "name": "光标格",
           "color": "$menu_item_color",
+          "key": "cursor",
           "size": 12,
           "padding": [
-            10,
             5,
-            10,
+            5,
+            5,
             5
-          ],
-          "key": "cursor"
+          ]
         }
-      ]
-    },
-    {
-      "type": "Switch",
-      "name": "音频控制",
-      "color": "$menu_item_color",
+      ],
       "size": 12,
       "padding": [
         5,
@@ -379,12 +381,20 @@
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_SoundEngine.png",
-        "on":"open/NeuronOn_SoundEngine.png",
-        "icon":"open/NeuronOn_SoundEngine.png"
-      },
+        "off": "close/NeuronOff_InventoryMove.png",
+        "on": "open/NeuronOn_InventoryMove.png",
+        "icon": "open/NeuronOn_InventoryMove.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "音频控制",
+      "color": "$menu_item_color",
       "tag": "fun_sound_engine",
       "on": "只支持原版特性的服务器上使用",
       "items": [
@@ -413,30 +423,35 @@
           "key": "record",
           "name": "录制音频",
           "color": "$menu_item_color",
-          "size": 12,
-          "on": "录制来自服务器的音效。录制时请勿打开播放"
+          "on": "录制来自服务器的音效。录制时请勿打开播放",
+          "size": 12
         },
         {
           "type": "Switch",
           "key": "play_record",
           "name": "播放录制",
           "color": "$menu_item_color",
-          "size": 12,
-          "on": "播放录制的音频。播放时请勿打开录制"
+          "on": "播放录制的音频。播放时请勿打开录制",
+          "size": 12
         },
         {
           "type": "RadioGroup",
           "key": "mode",
           "name": "播放对象",
           "color": "$menu_item_color",
-          "size": 8,
           "items": [
+            {
+              "key": "none",
+              "name": "无播放",
+              "color": "$menu_item_color",
+              "checked": true,
+              "size": 8
+            },
             {
               "key": "local",
               "name": "自身位置",
               "color": "$menu_item_color",
-              "size": 8,
-              "checked": true
+              "size": 8
             },
             {
               "key": "player",
@@ -450,7 +465,8 @@
               "color": "$menu_item_color",
               "size": 8
             }
-          ]
+          ],
+          "size": 8
         },
         {
           "type": "TextView",
@@ -478,111 +494,132 @@
             5
           ]
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_SoundEngine.png",
+        "on": "open/NeuronOn_SoundEngine.png",
+        "icon": "open/NeuronOn_SoundEngine.png"
+      }
     },
     {
       "type": "Switch",
       "name": "建筑工具",
       "color": "$menu_item_color",
+      "tag": "script_build_tool",
       "size": 12,
       "padding": [
-        10,
         5,
-        10,
-        5
+        0,
+        5,
+        0
       ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "off":"close/NeuronOff_BuildTool.png",
-        "on":"open/NeuronOn_BuildTool.png",
-        "icon":"open/NeuronOn_BuildTool.png"
-      },
-      "tag": "script_build_tool"
+        "off": "close/NeuronOff_BuildTool.png",
+        "on": "open/NeuronOn_BuildTool.png",
+        "icon": "open/NeuronOn_BuildTool.png"
+      }
     },
     {
       "type": "TextView",
       "name": "进入本地游戏",
       "color": "$menu_item_color",
+      "margins": 7,
+      "padding": 5,
+      "tag": "fun_local_game",
       "size": 12,
-      "padding": [
-        10,
-        5,
-        10,
-        5
-      ],
       "shortcut": {
         "type": "ClickButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "icon":"other/Neuron_LocalGame.png"
-      },
-      "tag": "fun_local_game"
+        "icon": "other/Neuron_LocalGame.png"
+      }
     },
     {
       "type": "TextView",
       "name": "创建本地世界",
       "color": "$menu_item_color",
+      "margins": 7,
+      "padding": 5,
+      "tag": "fun_create_world",
       "size": 12,
-      "padding": [
-        10,
-        5,
-        10,
-        5
-      ],
       "shortcut": {
         "type": "ClickButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
-        "icon":"other/Neuron_CreateWorld.png"
-      },
-      "tag": "fun_create_world"
+        "icon": "other/Neuron_CreateWorld.png"
+      }
     },
     {
       "type": "Switch",
       "name": "自动切换工具",
       "color": "$menu_item_color",
+      "tag": "fun_auto_tool",
       "size": 12,
-      "padding": [5, 0, 5, 0],
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
       "shortcut": {
         "type": "CheckedButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
         "off": "close/NeuronOff_AutoTool.png",
         "on": "open/NeuronOn_AutoTool.png",
         "icon": "open/NeuronOn_AutoTool.png"
-      },
-      "tag": "fun_auto_tool"
+      }
     },
     {
       "type": "TextView",
       "name": "租赁服密码爆破",
       "color": "$menu_item_color",
+      "margins": 7,
+      "padding": 5,
+      "tag": "fun_client_manager",
       "size": 12,
-      "padding": [8, 8, 8, 8],
       "shortcut": {
         "type": "ClickButton",
-        "params": [65, 65],
+        "params": [
+          65,
+          65
+        ],
         "no_circle": true,
         "icon": "other/Neuron_RentalPwdCrack.png"
-      },
-      "tag": "fun_client_manager"
+      }
     },
     {
       "type": "Switch",
       "name": "联机假名",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [5, 0, 5, 0],
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [65, 65],
-        "no_circle": true,
-        "off": "close/NeuronOff_FakeName.png",
-        "on": "open/NeuronOn_FakeName.png",
-        "icon": "open/NeuronOn_FakeName.png"
-      },
       "tag": "fun_fake_name",
       "items": [
         {
@@ -591,7 +628,8 @@
           "key": "content",
           "color": "$menu_item_color",
           "max_lines": 1,
-          "register_setting": "fake_name_save"
+          "register_setting": "fake_name_save",
+          "size": 8
         },
         {
           "type": "CheckBox",
@@ -600,22 +638,30 @@
           "color": "$menu_item_color",
           "size": 8
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_FakeName.png",
+        "on": "open/NeuronOn_FakeName.png",
+        "icon": "open/NeuronOn_FakeName.png"
+      }
     },
     {
       "type": "Switch",
       "name": "自定义等级标识",
       "color": "$menu_item_color",
-      "size": 12,
-      "padding": [5, 0, 5, 0],
-      "shortcut": {
-        "type": "CheckedButton",
-        "params": [65, 65],
-        "no_circle": true,
-        "off": "close/NeuronOff_CustomGrowthLevel.png",
-        "on": "open/NeuronOn_CustomGrowthLevel.png",
-        "icon": "open/NeuronOn_CustomGrowthLevel.png"
-      },
       "tag": "fun_custom_growth_level",
       "items": [
         {
@@ -623,7 +669,6 @@
           "key": "type",
           "name": "标识",
           "color": "$menu_item_color",
-          "size": 8,
           "items": [
             {
               "key": "wood",
@@ -685,14 +730,14 @@
               "color": "$menu_item_color",
               "size": 8
             }
-          ]
+          ],
+          "size": 8
         },
         {
           "type": "RadioGroup",
           "key": "level",
           "name": "等级",
           "color": "$menu_item_color",
-          "size": 8,
           "items": [
             {
               "key": "1",
@@ -724,9 +769,28 @@
               "color": "$menu_item_color",
               "size": 8
             }
-          ]
+          ],
+          "size": 8
         }
-      ]
+      ],
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_CustomGrowthLevel.png",
+        "on": "open/NeuronOn_CustomGrowthLevel.png",
+        "icon": "open/NeuronOn_CustomGrowthLevel.png"
+      }
     }
   ]
 }

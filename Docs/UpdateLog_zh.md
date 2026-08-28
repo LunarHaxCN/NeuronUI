@@ -1,376 +1,128 @@
 # NeuronUI 更新日志
 
-# 2026.7.10  Amore-Fix
-- 全面迁移 UI 变量命名至 7.10.3 新体系
-  - $TextColor → $menu_item_color
-  - $MenuColor → $menu_color
-  - $TitleBG → $menu_title_background_color
-  - $TitleColor → $menu_title_gradient_text_begin_color / _end_color
-  - $MenuHide → $menu_item_hide_color
-  - $ItemSet → $menu_item_set_color
-- 修复菜单结构属性兼容性
-  - elevation 调至 3
-  - 更新 colors 数组为渐变色双变量
-  - 移除 ui_definition.json 中 theme 字段
-  - 更新 ui_variables.json 为新变量体系
-
-# 2026.7.10  Amore
-- 适配 7.10.3
-- 新增如下快捷键
-  - Player  [发包挖掘] (PacketMine)
-  - Player  [相机穿墙] (NoCameraClip)
-  - Player  [无受伤抖动] (NoHurtCamera)
-  - Player  [无限投射] (InfiniteThrow)
-  - Render  [中国帽] (ChinaHat)
-  - Render  [落地波纹] (JumpCircles)
-  - Render  [自定义雾颜色] (FogColor)
-  - Render  [自定义实体颜色] (MobColor)
-  - Render  [自定义受击颜色] (HurtColor)
-  - Network  [延迟放行包] (Blink)
-  - Auxiliary  [自动切换工具] (AutoTool)
-  - Auxiliary  [联机假名] (FakeName)
-  - Auxiliary  [自定义等级标识] (CustomGrowthLevel)
-  - Auxiliary  [租赁服密码爆破] (RentalPwdCrack)
-  - Settings  [保存全部配置] (SaveMenusConfig)
-  - Settings  [加载全部配置] (LoadMenusConfig)
-- 新增脚本 lib_rpc.js、nbt.js、py_executor.js、test_crypto.js、test_ws.js、test_shape.js
-- 新增目录 plugins/、resource_packs/、sound_manager/、sounds/
-- 更新 conf_enchant.json，新增风爆/致密/破甲附魔并补全图标路径，重排常用附魔到前
-- 完整重写 conf_packet.json，收录全部209条数据包ID
-- 重写 README.md、AGENTS.md、更新日志
-- 更新 conf_item_editor.json
-
-# 2025.7.16  Methadone
-- 适配 7.5.2
-
-# 2025.3.3  Kort
-- 适配 7.4.1
-- 增加 [自由视角] (FreeCamera) 与 [自动开弓] (AutoBow) 的快捷键
-- 修改 [视图模型] (ViewModel) 的快捷键
-
-# 2025.2.22  Ceirseacha
-- 适配 7.3.9
-- 增加 [击中范围] (Reach) 与 [一步登天] (Step) 的快捷键
-
-# 2025.2.12  Fuaime
-- 适配 7.3.7
-- 移除Extra菜单
-- 移除Bhop与次元空间及其快捷键,脚本文件
-
-——Fix——
-- 修复部分错误的大小
-- 修复加载UI时错误的版本号显示
-
-# 2025.2.2  Lydform
-- 适配 7.3.6
-- 移除NoveXare 5.2 破解版
-- 修改 [建筑工具] (BuildTool) 的快捷键
-
-# 2024.12.17  Andromeda
-- 适配 7.2.6
-
-# 2024.11.24  Material
-- 适配 7.2.2
-
-# 2024.10.1  Celebration
-- 适配 7.1.7
-- 祝各位国庆节快乐
-
-# 2024.9.29  Immutable
-- 适配 7.1.6
-- 删除 [零日] (ZeroDay) 的快捷键
-- 删除已经无用的『InfiniteAura』及其js、快捷键以优化UI体积，提高加载速度
-
-# 2024.8.11  Ocean
-- 适配 7.1.3
-- 删除7.1.3移除的功能 [SAUTH登录] 及其快捷键
-- 删除无用的 attackDropItem.js
-
-# 2024.8.4  Atlantis
-- 适配 7.1.1
-- 修改网络数据包管理顺序
-- 取消对NoveXare的适配，除非呼声较大
-- 优化体积
-- 修改部分功能位置
-- 将ui_definition.json中theme参数修改为Theme.Material3.DayNight.NoActionBar，暂未见明显效果
-
-——Atlantis-AttDr——
-- 更新攻击掉落物的js
-
-# 2024.7.23  Arrogant
-- 适配 7.1.0
-- 修改 UpdateLog.md 中部分描述错误
-
-——Arrogant-NBT——
-- 修改网络数据包管理顺序
-
-# 2024.7.19  Epiphany
-- 修复部分菜单错误
-- 整理分类重新排列所有功能，非基于原版UI与DianaGodUI
-- 修改菜单顺序
-- 删除动态背景背景版本
-- 适配 NoveXare-3.7.1
-- 修改 UpdateLog.md 中部分描述
-
-———Epiphany_Fi———
-- 修复菜单加载错误
-
-# 2024.7.18  Aurora
-- 适配 7.0.9
-- 修复 附魔菜单 中 附魔属性 缺少的问题
-- 修复菜单问题
-- 适配 NoveXare-3.6
-
-# 2024.7.11  Nova
-- 适配 7.0.6
-
-# 2024.7.9  Star
-- 适配 7.0.5
-
-# 2024.7.9  End
-- 优化 Neuron_Bhop.js 与 Neuron_EscapeSpace.js
-- 新增NOBG分支，该版本无动态星空背景图，修改了配色，提高UI加载速度，降低游戏闪退概率
-- 『Player』 新增隐藏功能 [方块操作距离] (ExBlockReach)
-- 删除 『Quick』 菜单
-- 增加 [方块操作距离] (ExBlockReach) 的快捷键
-- 修复 UpdateLog.md 内的部分描述错误
-- 修改部分菜单文字大小
-
-# 2024.6.18  3.9
-- 适配 7.0.4
-
-# 2024.6.17  3.8
-- 适配 7.0.3
-- 删除 [栓绳连线] (TetherLine) [粒子连线] (ParticleLine) [执行宠物指令] (Command) 的快捷键
-- 删除 『Command』 菜单
-- 修改 [无粒子显示] (NoParticle) 的菜单位置
--  『Quick』 新增 [崩溃服务器] (Crasher)
-- 删除了 [网络服绕En(仅伏羲)] js
-- 删除多余js，优化体积
-- 提高UI稳定性，优化UI流畅度
-
-———3.8.1———
-- 修复建筑工具js文件丢失的问题
-- 修复 『Render』 菜单无法打开的问题
-- 删除 [执行宠物指令] (Command) 的快捷键
-- 修复 [SAUTH登录] (SauthLogin) 的快捷键丢失问题
-- 修改字体使UI更加美观
-
-———3.8.2———
-- 增加 [自动点击] (AutoClicker) 的快捷键
-
-# 2024.5.26  3.7
-- 修复 [物品编辑器] (ItemEditor) [退出游戏登录] (LogOut) 的快捷键材质路径错误问题
-- 修复 ui_definition.json 中的错误问题
-- 新增如下快捷键
-  - Auxiliary  [建筑工具] (BuildTool)
-  - Auxiliary  [音频控制] (SoundEngine)
-  - Auxiliary  [背包移动] (InventoryMove)
-  - Auxiliary  [加入游戏] (IP Extra)
-  - Auxiliary  [SAUTH登录] (SauthLogin)
-  - Combat  [自动选取武器] (AutoWeapon)
-  - Combat  [自动选取方块] (AutoBlock)
-  - Player  [单人无敌] (Invincible)
-  - Render  [主界面模块] (HudModule)
-  - Settings  [删除游戏数据] (DeleteAppData)
-  - Settings  [删除用户数据] (DeleteUserData)
-  - Settings  [删除下载包缓存] (DeletePackCache)
-  - Settings  [RN显示] (ReactNativeShow)
-  - Settings  [RN隐藏] (ReactNativeHide)
-  - Settings  [RN开启] (ReactNativeOpen)
-  - Settings  [RN关闭] (ReactNativeClose)
-  - Settings  [显示开发配置窗口] (ReactNativeShowDevOptionsDialog)
-  - Settings  [MCPDecrypt] (MCPDecrypt)
-  - Settings  [RN Debug] (ReactNativeDebug)
-  - Settings  [加入游戏自动复制地址] (CopyAddress)
-  - Settings  [悬浮窗口半屏显示] (WindowCut)
-  - Settings  [隐藏菜单快捷按钮(长按)] (HideMenu)
-  - World  [进入本地游戏] (LocalGame)
-  - World  [创建本地世界] (CreateWorld)
-- 修改UpdateLog部分描述
-- 修复Neuron_auxiliary.json中的部分描述错误问题
-
-———3.7.1———
-- 删除所有NBT文件
-- 删除所有建筑文件
-- 删除所有来源为XxxGBRCxxX的js
-- 修改部分文本描述错误
-- 优化体积
-- 适配 HYTMod 2.2.2
-
-———3.7.2———
-- 修复 [网络数据包管理] (PacketManager) 的快捷键材质路径错误问题
-
-———3.7.3———
-- 修复 [悬浮窗口半屏显示] (WindowCut) [主界面模块] (HudModule) 默认快捷键显示的问题
-- 修复 『Quick』 菜单加载错误的问题
-- 修改部分文本描述问题
-
-# 2024.5.24  3.6
-- .删除 『Structure』菜单
-- 修改 [游戏速度] (Timer) 的快捷键错误
-- 修改 『Quick』 菜单部分内容
-- 新增如下快捷键
-  - Auxiliary  [快速建造] (FastBuild)
-  - Combat  [实体骑乘] (EntityRide)
-  - Movement  [自动冲刺] (AutoSprint)
-  - Movement  [坐骑飞行] (RideFly)
-  - Network  [重复数据包] (RePacket)
-  - Network  [停止数据包] (NoPacket)
-  - Network  [网络数据包管理] (PacketManager)
-  - Player  [无摔落伤害] (NoFall)
-  - Player  [无火焰附加] (NoFire)
-  - Player  [放大镜] (Zoom)
-  - Player  [物品编辑器] (ItemEditor)
-  - Render  [粒子连线] (ParticleLine)
-  - Render  [栓绳连线] (TetherLine)
-  - Render  [箱子渲染] (ChestESP)
-  - Settings  [水印] (WaterMark)
-  - Settings  [退出游戏登录] (LogOut)
-- 适配 HYTMod 2.2.1
-- 修改更新日志中的部分文字错误与内容描述
-- 重命名更新日志为 UpdateLog.md
-
-# 2024.5.19  3.5
-- 适配 7.0.2
-- 添加 [方块轮廓] (BlockOutlineRender) [实体追踪] (Tracer) [ESP] 的快捷键
-- 删除 『Potion』 菜单
-
-# 2024.5.19  3.4
-- 适配 7.0.1
-
-———3.4.1———
-- 添加 [方块透视] (Xray) 的快捷键
-
-# 2024.5.4  3.3
-- 适配 7.0.0
-
-———3.3.1———
-- 自瞄参数添加
-
-# 2024.4.26  3.2
-- 适配 6.9.9
-
-# 2024.4.22  3.1
-- 适配 6.9.7
-- 新增大量NBT文件
-- 新增大量建筑文件
-- 删除ui_definition.json中多余的注释
-- 删除 『Wiki』 『Chunkbase』 『Bilibili』 菜单
-
-# 2024.4.6  3.0
-- 适配 6.9.6
-
-# 2024.4.5  2.9
-- 适配 6.9.5
-
-# 2024.4.2  2.8
-- 适配 6.9.4
-
-———2.8.1———
-- 增加反击退的水平与垂直调节
-
-# 2024.3.1  2.7
-- 适配 6.9.2
-- 新增[BJD Shop] (布吉岛远程商店) 的快捷键
-
-———2.7.1———
-- 修复ui_definition.json的部分问题
-
-———2.7.2———
-- 适配 6.9.3
-
-# 2024.2.19  2.6
-- 适配 6.9.1
-- 增加大量js，来源：XxxGBRCxxX
-
-# 2024.2.16  2.5
-- 适配 6.9.1
-
-# 2024.2.12  2.4
-- 新增跑路科技隐藏的参数 战斗类-自瞄-视角速度
-- 删除用户标识符
-
-# 2024.2.2  2.3
-- 删去UI标题与主体之间对不齐的缝
-- 新增 『Wiki』 『Chunkbase』 『Bilibili』 菜单
-- 网络数据包管理完全体
-- 加入用户标识符
-
-# 2024.1.30  2.2
-- 修改UI配色
-- 修改UI为圆角
-- 适配 6.9.0
-
-———2.2.1———
-- 修改UI部分描述
-
-———2.2.2———
-- 修复『Extra』无法打开的问题
-
-# 2024.1.30  2.1
-- 增加InfiniteAura的传送信息显示开关
-
-# 2024.1.26  2.0
-- 修改InfiniteAura配置调节为UI控制
-- 修改部分文本描述
-
-———2.0.1———
-- 修改部分快捷键
-
-———2.0.2———
-- 修改部分快捷键
-
-# 2024.1.22  1.9
-- 适配 6.8.9
-
-———1.9.1———
-- 修复ui_definition.json的部分错误
-
-# 2024.1.16  1.8
-- 增加 『Extra』 菜单
-- 增加 [Bhop]
-- 修改菜单排序
-- 修改次元空间为Switch
-- 规范部分命名
-
-# 2024.1.11 1.7
-- 删除ZH分支
-- 增加动态星空背景分支
-- 添加 『Potion』 『Structure』 菜单
-- 修改Command-Auxiliary.js，使 [DeopAll] [KickAll] 由Switch控制
-
-# 2024.1.8  1.6
-- 增加 [网络服删除资源-For伏羲X.js]
-- 增加 『Command』 菜单
-- InfiniteAura增加配置修改
-- 修改部分描述
-
-# 2024.1.7  1.5
-- 增加UI Background
-- 增加 [零日] (ZeroDay) [执行宠物指令] (Command) 的快捷键
-
-———1.5.1———
-- 增加 [自动破坏] (AutoDestroy) [点击破坏] (ClickDestroy) [麒麟臂] (KirinHand) 的快捷键
-
-# 2024.1.7  1.4
-- 适配 6.8.8
-
-# 2024.1.6  1.3
-- 修改Quick中部分内容
-- 『Quick』新增EaseCation次元空间
-- 增加 [次元空间] (EscapeSpace) 的快捷键
-
-# 2024.1.4  1.2
-- 修复已知问题
-
-# 2024.1.4  1.1
-- 增加可控制开源InfiniteAura的UI
-- 增加 [附魔物品] (Enchante) 的快捷键
-- 更改 [传送菜单+] (TpMenu) 的快捷键
-
-# 2024.1.1  1.0
-- 30+快捷键
-- 花雨庭Godmode
-- JavaScriptLoader
-- 花雨庭绕En
+> 这里记录 NeuronUI 的界面、脚本、资源与兼容性变化。版本代号采用英文单词，客户端版本仅表示适配目标；未标记为“已发布”的版本不会产生 GitHub Release。
+
+## 快速导航
+
+- [2026 年](#2026-年)
+- [2025 年](#2025-年)
+- [2024 年](#2024-年)
+- [版本说明](#版本说明)
+
+---
+
+## 2026 年
+
+### 2026.8.28 · Homura
+
+**适配目标：** `7.11.3`　·　**状态：** 已发布
+
+#### 界面
+
+- 以 Neuron 项目的实际使用习惯重新确认面板顺序与功能归类。
+- 将新增能力归入现有分类，保持菜单结构紧凑一致。
+- 新增独立 `Super` 面板，集中放置定制版功能和宠物背包入口。
+- 保留 Player、Movement、Render、Loophole 等既有分类及项目专属入口。
+
+#### 脚本与资源
+
+- 同步定制版 `rpc_system.js`，接入宠物背包 RPC 操作。
+- 重构 `JsLoader.js`，适配新版 `fs`、`gui`、`app`、`thread` 与 `runScript` API。
+- 保留旧版 API 兼容兜底，脚本加载过程不再改写原始脚本文件。
+- 保留 Enchant、ItemEditor、NBT 的项目原有快捷键图标。
+- 统一快捷键资源引用格式，保留项目原有 Enchant、ItemEditor、NBT 图标。
+
+#### 工程与文档
+
+- 根目录 README 与项目说明统一使用中文，并更新为 Homura / 7.11.3。
+- 重新整理 `.gitignore`，区分参考模板、本地缓存和构建产物。
+- 重写本更新日志的目录、版本层级和历史记录格式。
+
+### 2026.7.10 · Amore-Fix
+
+- 完成 7.10.3 新变量命名迁移。
+- 修正菜单结构兼容性、渐变标题颜色和 UI 定义字段。
+
+### 2026.7.10 · Amore
+
+**适配目标：** `7.10.3`
+
+- 补充 Player、Render、Network、Auxiliary、Settings 等分类的快捷键。
+- 新增 RPC、NBT、Python 执行器及测试脚本。
+- 新增插件、资源包、音频管理等目录。
+- 更新附魔配置与图标，整理数据包配置顺序。
+- 更新 README、开发规范和配置文件。
+
+---
+
+## 2025 年
+
+| 日期 | 代号 | 适配目标 | 主要内容 |
+|------|------|----------|----------|
+| 2025.7.16 | Methadone | 7.5.2 | 版本适配 |
+| 2025.3.3 | Kort | 7.4.1 | 增加自由视角、自动开弓快捷键，调整视图模型 |
+| 2025.2.22 | Ceirseacha | 7.3.9 | 增加击中范围、一步登天快捷键 |
+| 2025.2.12 | Fuaime | 7.3.7 | 移除 Extra、Bhop、次元空间及相关脚本，修复尺寸与版本显示 |
+| 2025.2.2 | Lydform | 7.3.6 | 移除旧版 NoveXare，调整建筑工具快捷键 |
+
+---
+
+## 2024 年
+
+### 12 月—8 月：版本适配与分类整理
+
+| 日期 | 代号 | 适配目标 | 主要内容 |
+|------|------|----------|----------|
+| 2024.12.17 | Andromeda | 7.2.6 | 版本适配 |
+| 2024.11.24 | Material | 7.2.2 | 版本适配 |
+| 2024.10.1 | Celebration | 7.1.7 | 版本适配与节日文本 |
+| 2024.9.29 | Immutable | 7.1.6 | 移除 ZeroDay 与无用 InfiniteAura 资源 |
+| 2024.8.11 | Ocean | 7.1.3 | 移除 SAUTH 登录与旧攻击掉落脚本 |
+| 2024.8.4 | Atlantis | 7.1.1 | 调整数据包管理顺序、优化体积与菜单位置 |
+| 2024.7.23 | Arrogant | 7.1.0 | 版本适配 |
+| 2024.7.19 | Epiphany | — | 整理分类、修复菜单加载并移除动态背景版本 |
+| 2024.7.18 | Aurora | 7.0.9 | 修复附魔菜单与菜单加载问题 |
+
+### 7 月—5 月：功能扩展
+
+| 日期 | 代号 | 适配目标 | 主要内容 |
+|------|------|----------|----------|
+| 2024.7.11 | Nova | 7.0.6 | 版本适配 |
+| 2024.7.9 | Star | 7.0.5 | 版本适配 |
+| 2024.7.9 | End | 7.0.5 | 增加方块操作距离，移除 Quick 菜单，优化脚本 |
+| 2024.6.18 | 3.9 | 7.0.4 | 版本适配 |
+| 2024.6.17 | 3.8 | 7.0.3 | 增加崩溃服务器，整理网络与快捷键资源 |
+| 2024.5.26 | 3.7 | — | 修复 UI 定义，补充大量快捷键与管理功能 |
+| 2024.5.24 | 3.6 | — | 增加快速建造、骑乘、网络包管理等功能 |
+| 2024.5.19 | 3.5 / 3.4 | 7.0.1–7.0.2 | 版本适配，增加方块轮廓、追踪和 ESP 快捷键 |
+| 2024.5.4 | 3.3 | 7.0.0 | 版本适配与自瞄参数 |
+
+### 4 月—1 月：项目基础
+
+| 日期 | 代号 | 主要内容 |
+|------|------|----------|
+| 2024.4.26 | 3.2 | 适配 6.9.9 |
+| 2024.4.22 | 3.1 | 增加 NBT、建筑示例，移除旧菜单入口 |
+| 2024.4.6 | 3.0 | 适配 6.9.6 |
+| 2024.4.5 | 2.9 | 适配 6.9.5 |
+| 2024.4.2 | 2.8 | 适配 6.9.4，增加反击退参数 |
+| 2024.3.1 | 2.7 | 适配 6.9.2，增加远程商店入口 |
+| 2024.2.19 | 2.6 | 适配 6.9.1，加入第三方脚本 |
+| 2024.2.16 | 2.5 | 适配 6.9.1 |
+| 2024.2.12 | 2.4 | 增加自瞄视角速度，移除用户标识 |
+| 2024.2.2 | 2.3 | 完善数据包管理与外部资源入口 |
+| 2024.1.30 | 2.2 | 更新配色、圆角和 6.9.0 适配 |
+| 2024.1.16 | 1.8 | 增加 Extra、Bhop，调整菜单顺序 |
+| 2024.1.11 | 1.7 | 增加 Potion、Structure 等早期菜单 |
+| 2024.1.8 | 1.6 | 增加 Command 菜单与 InfiniteAura 配置 |
+| 2024.1.7 | 1.5 | 增加 UI 背景与早期快捷键 |
+| 2024.1.4 | 1.2 | 修复已知问题 |
+| 2024.1.1 | 1.0 | 首个版本，包含基础快捷键、JavaScript 加载器与 Godmode |
+
+---
+
+## 版本说明
+
+- 版本代号用于区分资源包迭代，不直接使用客户端版本号。
+- “适配目标”表示兼容的客户端模板，不代表 NeuronUI 已在该版本发布。
+- 历史版本保留为记录，不代表当前面板仍包含当时的全部功能。

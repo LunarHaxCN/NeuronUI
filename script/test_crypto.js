@@ -1,3 +1,6 @@
+
+const crypto = require("crypto")
+
 // only ascii
 function strToBuf(str) {
     const bytes = []
@@ -51,14 +54,14 @@ function randBuf(len) {
     const key = randBuf(16)
     const iv = randBuf(16)
 
-    const encrypted = Crypto.encrypt({
+    const encrypted = crypto.encrypt({
         cipher: "aes-128-cbc",
         data,
         key,
         iv
     })
 
-    const decrypted = Crypto.decrypt({
+    const decrypted = crypto.decrypt({
         cipher: "aes-128-cbc",
         data: encrypted,
         key,
@@ -75,14 +78,14 @@ function randBuf(len) {
     const key = randBuf(32)
     const iv = randBuf(16)
 
-    const enc = Crypto.encrypt({
+    const enc = crypto.encrypt({
         cipher: "aes-256-cbc",
         data,
         key,
         iv
     })
 
-    const dec = Crypto.decrypt({
+    const dec = crypto.decrypt({
         cipher: "aes-256-cbc",
         data: enc,
         key,
@@ -96,19 +99,19 @@ function randBuf(len) {
     console.log("=== error tests ===")
 
     try {
-        Crypto.encrypt()
+        crypto.encrypt()
     } catch (e) {
         console.log("OK:", e.message)
     }
 
     try {
-        Crypto.encrypt({cipher: "aes-128-cbc"})
+        crypto.encrypt({cipher: "aes-128-cbc"})
     } catch (e) {
         console.log("OK:", e.message)
     }
 
     try {
-        Crypto.encrypt({
+        crypto.encrypt({
             cipher: "not-exist",
             data: randBuf(8)
         })
@@ -117,7 +120,7 @@ function randBuf(len) {
     }
 
     try {
-        Crypto.digest("sha256", "not buffer")
+        crypto.digest("sha256", "not buffer")
     } catch (e) {
         console.log("OK:", e.message)
     }
@@ -130,14 +133,14 @@ function randBuf(len) {
     const key = randBuf(32)
     const iv = randBuf(16)
 
-    const enc = Crypto.encrypt({
+    const enc = crypto.encrypt({
         cipher: "aes-256-cbc",
         data,
         key,
         iv
     })
 
-    const dec = Crypto.decrypt({
+    const dec = crypto.decrypt({
         cipher: "aes-256-cbc",
         data: enc,
         key,
@@ -152,7 +155,7 @@ function randBuf(len) {
 
     const data = strToBuf("abc")
 
-    const h = Crypto.digest("sha256", data)
+    const h = crypto.digest("sha256", data)
 
     console.log(hex(h))
     // ba7816bf8f01cfea414140de5dae2223
@@ -164,7 +167,7 @@ function randBuf(len) {
 
     const data = strToBuf("abc")
 
-    const h = Crypto.digest("sha1", data)
+    const h = crypto.digest("sha1", data)
 
     console.log(hex(h))
     // a9993e364706816aba3e25717850c26c9cd0d89d
@@ -175,7 +178,7 @@ function randBuf(len) {
 
     const data = strToBuf("abc")
 
-    const h = Crypto.digest("md5", data)
+    const h = crypto.digest("md5", data)
 
     console.log(hex(h))
     // 900150983cd24fb0d6963f7d28e17f72
@@ -186,7 +189,7 @@ function randBuf(len) {
 
     const empty = new ArrayBuffer(0)
 
-    const h = Crypto.digest("sha256", empty)
+    const h = crypto.digest("sha256", empty)
 
     console.log(hex(h))
     // e3b0c44298fc1c149afbf4c8996fb924...
@@ -197,7 +200,7 @@ function randBuf(len) {
 
     const data = randBuf(1024 * 1024) // 1MB
 
-    const h = Crypto.digest("sha256", data)
+    const h = crypto.digest("sha256", data)
 
     console.log("length:", new Uint8Array(h).length)
     console.log(hex(h))
@@ -208,8 +211,8 @@ function randBuf(len) {
 
     const data = strToBuf("repeat test")
 
-    const h1 = Crypto.digest("sha256", data)
-    const h2 = Crypto.digest("sha256", data)
+    const h1 = crypto.digest("sha256", data)
+    const h2 = crypto.digest("sha256", data)
 
     console.log(hex(h1) === hex(h2))
 }
@@ -222,7 +225,7 @@ function randBuf(len) {
     const algos = ["md5", "sha1", "sha224", "sha256", "sha384", "sha512"]
 
     for (let i = 0; i < algos.length; i++) {
-        const h = Crypto.digest(algos[i], data)
+        const h = crypto.digest(algos[i], data)
         console.log(algos[i], new Uint8Array(h).length)
     }
 }
@@ -231,7 +234,7 @@ function randBuf(len) {
     console.log("=== binary data ===")
 
     const a = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 255])
-    const h = Crypto.digest("sha256", a.buffer)
+    const h = crypto.digest("sha256", a.buffer)
 
     console.log(hex(h))
 }
@@ -240,7 +243,7 @@ function randBuf(len) {
     console.log("=== invalid algorithm ===")
 
     try {
-        Crypto.digest("not-exist", strToBuf("x"))
+        crypto.digest("not-exist", strToBuf("x"))
     } catch (e) {
         console.log("OK:", e.message)
     }
@@ -256,7 +259,7 @@ function randBuf(len) {
     merged.set(new Uint8Array(a), 0)
     merged.set(new Uint8Array(b), a.byteLength)
 
-    const h = Crypto.digest("sha256", merged.buffer)
+    const h = crypto.digest("sha256", merged.buffer)
 
     console.log(hex(h))
 }

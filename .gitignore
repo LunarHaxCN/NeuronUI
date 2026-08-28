@@ -1,7 +1,47 @@
-/resources
-opencode.json
-new_icons_list.md
+# NeuronUI .gitignore
+# 只忽略本地参考资料、工具缓存和可再生成产物；项目文档与图标清单保持可提交。
+
+# 本地参考模板（不属于 NeuronUI 成品）
+/resources/
+
+# 本地工具、编辑器和系统文件
+/opencode.json
+/.idea/
+/.vscode/
+*.swp
+*.swo
 .DS_Store
+Thumbs.db
+Desktop.ini
+
+# 环境变量与临时凭据（示例文件仍可提交）
+.env
+.env.*
+!.env.example
+
+# 日志、缓存和测试覆盖率
 *.log
-/temp
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+coverage/
+
+# 构建、打包和临时输出
+/temp/
+/example/
+/dist/
+/build/
+*.tmp
+*.temp
+*.bak
+*.orig
 *.7z
+*.zip
+
+# 内部审查记录不随资源包发布
+/Docs/代码审查.md
+new_icons_list.md

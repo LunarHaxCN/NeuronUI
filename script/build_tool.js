@@ -1,11 +1,18 @@
 /**
  * @author: WhiteWallTeam
- * @date: 2025.07.27
+ * @date: 2026.07.03
  * @description: 建筑工具
  */
 
+const fs = require('fs');
+const app = require('app');
+const mc = require('minecraft');
+const gui = require('gui');
+const world = require('world');
+const pl = require('player');
+
 const Config = {
-    DATA_PATH: getResource() + '/data',
+    DATA_PATH: app.getResource() + '/data',
     MODULE_BUILD_TOOL: false,
     CLICK_COPY: false,
     EXCLUDE_AIR: true,
@@ -14,23 +21,30 @@ const Config = {
     BUILD_TASKS_SPEED: 5,
     CURRENT_TICK: 0,
     SAVE_TICK: 0,
+    ARRAY_LIST: new gui.ArrayList(
+        {
+            'function': 'script_build_tool',
+            'name': '建筑工具',
+            'shortName': '建筑工具'
+        }
+    )
 };
 
 try {
-    if (!File.exist(Config.DATA_PATH)) {
-        File.mkdirs(Config.DATA_PATH);
+    if (!fs.exists(Config.DATA_PATH)) {
+        fs.createDirectories(Config.DATA_PATH);
     }
 } catch (error) {
-    clientMessage(`Failed to create data directory: ${error}`);
+    mc.clientMessage(`Failed to create data directory: ${error}`);
 }
 
 function onCallModuleEvent(args) {
     const {fun, value} = args;
 
-    if (fun === 'script_build_tool' && isInGame()) {
+    if (fun === 'script_build_tool' && app.isInGame()) {
         Config.MODULE_BUILD_TOOL = value;
-        addCustomArrayList('script_build_tool', '建筑工具', '建筑工具', value);
-        clientMessage(`§b[建筑工具] §${value ? 'e已经启用，请点击地面打开菜单' : 'c已经禁用'}`);
+        Config.ARRAY_LIST.enabled = value;
+        mc.clientMessage(`§b[建筑工具] §${value ? 'e已经启用，请点击地面打开菜单' : 'c已经禁用'}`);
     }
 }
 
@@ -42,9 +56,9 @@ function bool2str(bool) {
 // 移除区块数据
 function removeBlocksData(name) {
     try {
-        File.delete(`${Config.DATA_PATH}/${name}`);
+        fs.remove(`${Config.DATA_PATH}/${name}`);
     } catch (error) {
-        clientMessage(`Failed to delete block data: ${error}`);
+        mc.clientMessage(`Failed to delete block data: ${error}`);
     }
 }
 
@@ -52,19 +66,19 @@ function removeBlocksData(name) {
 function saveBlocksData(name, blocks) {
     const json = JSON.stringify(blocks);
     try {
-        File.write(`${Config.DATA_PATH}/${name}.json`, json);
+        fs.write(`${Config.DATA_PATH}/${name}.json`, json);
     } catch (error) {
-        clientMessage(`Failed to save block data: ${error}`);
+        mc.clientMessage(`Failed to save block data: ${error}`);
     }
 }
 
 // 加载区块数据
 function loadBlocksData(name) {
     try {
-        const blocks = File.read(`${Config.DATA_PATH}/${name}`);
+        const blocks = fs.read(`${Config.DATA_PATH}/${name}`);
         return JSON.parse(blocks);
     } catch (error) {
-        clientMessage(`Failed to load block data: ${error}`);
+        mc.clientMessage(`Failed to load block data: ${error}`);
         return null;
     }
 }
@@ -79,16 +93,21 @@ function getChunkBlocks(x1, y1, z1, x2, y2, z2) {
     const ez = Math.max(z1, z2);
     const blocks = [];
 
+    const player = pl.getLocalPlayer();
+    const id = player.getDimensionId();
+    const clientWorld = world.getClientWorld();
+    const dimension = clientWorld.getDimension(id);
+
     for (let hx = sx; hx <= ex; hx++) {
         for (let hy = sy; hy <= ey; hy++) {
             for (let hz = sz; hz <= ez; hz++) {
-                const block = getBlock(hx, hy, hz);
-                if (Config.EXCLUDE_AIR && (block.id === 0 || block.namespace === 'minecraft:air')) {
+                const block = dimension.getBlock({x: hx, y: hy, z: hz});
+                if (Config.EXCLUDE_AIR && (block.getItemId() === 0 || block.getNamespace() === 'minecraft:air')) {
                     continue;
                 }
                 blocks.push({
-                    name: block.namespace,
-                    aux: block.aux,
+                    name: block.getNamespace(),
+                    aux: block.getData(),
                     x: hx - sx,
                     y: hy - sy,
                     z: hz - sz
@@ -108,7 +127,7 @@ function showListMenu() {
         buttons: []
     };
 
-    const files = File.list(Config.DATA_PATH);
+    const files = fs.list(Config.DATA_PATH);
 
     // 如果没有文件，添加“暂无数据”按钮
     if (!files || files.length === 0) {
@@ -123,10 +142,10 @@ function showListMenu() {
         });
     }
 
-    addForm(JSON.stringify(menu), function (index) {
+    gui.addForm(JSON.stringify(menu), function (index) {
         if (index >= 0 && files && files.length > index) {
             const blocks = loadBlocksData(files[index].name);
-            clientMessage(blocks ? '读取成功' : '读取失败');
+            mc.clientMessage(blocks ? '读取成功' : '读取失败');
             if (blocks) Config.BUILD_TASKS = blocks;
         }
     });
@@ -141,7 +160,7 @@ function showRemoveListMenu() {
         buttons: []
     };
 
-    const files = File.list(Config.DATA_PATH);
+    const files = fs.list(Config.DATA_PATH);
 
     // 检查是否存在文件，否则显示“暂无数据”按钮
     if (!files || files.length === 0) {
@@ -155,10 +174,10 @@ function showRemoveListMenu() {
         });
     }
 
-    addForm(JSON.stringify(menu), function (index) {
+    gui.addForm(JSON.stringify(menu), function (index) {
         if (index >= 0 && files && files.length > index) {
             removeBlocksData(files[index].name);
-            clientMessage('移除成功');
+            mc.clientMessage('移除成功');
         }
     });
 }
@@ -186,7 +205,7 @@ function showPosMenu() {
         ]
     };
 
-    addForm(JSON.stringify(menu), function (name, start_pos, end_pos) {
+    gui.addForm(JSON.stringify(menu), function (name, start_pos, end_pos) {
         if (name && start_pos && end_pos) {
             const s = start_pos.split(',').map(Number);
             const e = end_pos.split(',').map(Number);
@@ -199,12 +218,12 @@ function showPosMenu() {
             ) {
                 const blocks = getChunkBlocks(s[0], s[1], s[2], e[0], e[1], e[2]);
                 saveBlocksData(name, blocks);
-                clientMessage('保存成功');
+                mc.clientMessage('保存成功');
             } else {
-                clientMessage('输入错误，请输入有效的坐标格式');
+                mc.clientMessage('输入错误，请输入有效的坐标格式');
             }
         } else {
-            clientMessage('所有字段均为必填');
+            mc.clientMessage('所有字段均为必填');
         }
     });
 }
@@ -216,14 +235,14 @@ function bool2jsonValue(bool) {
 //显示选项菜单
 function showSettingMenu() {
     const value = bool2jsonValue(Config.EXCLUDE_AIR)
-    addForm(`{"type":"custom_form","title":"§b修改选项","content":[{"type":"slider","text":"建造速度","min":1,"max":20,"step":1,"default":${Config.BUILD_TASKS_SPEED}},{"type":"toggle","text":"排除空气","default":${value}}]}`, function (speed, toggle) {
+    gui.addForm(`{"type":"custom_form","title":"§b修改选项","content":[{"type":"slider","text":"建造速度","min":1,"max":20,"step":1,"default":${Config.BUILD_TASKS_SPEED}},{"type":"toggle","text":"排除空气","default":${value}}]}`, function (speed, toggle) {
         if (speed != null && speed > 0) {
             Config.BUILD_TASKS_SPEED = speed;
             Config.EXCLUDE_AIR = toggle;
-            clientMessage('§e保存成功');
+            mc.clientMessage('§e保存成功');
         }
     }, function () {
-        clientMessage('§e没有选择保存');
+        mc.clientMessage('§e没有选择保存');
     })
 }
 
@@ -278,14 +297,14 @@ function showMainMenu() {
             }
         ]
     }`;
-    addForm(menu, function (index) {
+    gui.addForm(menu, function (index) {
         switch (index) {
             case 0:
                 Config.CLICK_COPY = true;
                 Config.POS_DATA.x = 0;
                 Config.POS_DATA.y = 0;
                 Config.POS_DATA.z = 0;
-                clientMessage('§b两点复制 ' + bool2str(Config.CLICK_COPY));
+                mc.clientMessage('§b两点复制 ' + bool2str(Config.CLICK_COPY));
                 break
             case 1:
                 showPosMenu();
@@ -301,8 +320,8 @@ function showMainMenu() {
                 break
             case 5:
                 Config.MODULE_BUILD_TOOL = false;
-                addCustomArrayList('script_build_tool', '建筑工具', '建筑工具', false)
-                clientMessage('§b[建筑工具] §c已经禁用');
+                Config.ARRAY_LIST.enabled = false;
+                mc.clientMessage('§b[建筑工具] §c已经禁用');
                 break
         }
     })
@@ -321,20 +340,20 @@ function onPlayerBuildBlockEvent(playerId, x, y, z, side) {
             Config.POS_DATA.x = x;
             Config.POS_DATA.y = y;
             Config.POS_DATA.z = z;
-            showTipMessage('§e已经选择起点，请选择终点')
+            mc.showTipMessage('§e已经选择起点，请选择终点')
         } else {
             const blocks = getChunkBlocks(Config.POS_DATA.x, Config.POS_DATA.y, Config.POS_DATA.z, x, y, z);
             const date = new Date();
             const time = date.getTime().toString();
-            addForm(`{"type":"custom_form","title":"输入保存名称","content":[{"type":"input","text":"名称:","default":"${time}"}]}`, function (name) {
+            gui.addForm(`{"type":"custom_form","title":"输入保存名称","content":[{"type":"input","text":"名称:","default":"${time}"}]}`, function (name) {
                 if (typeof name == 'string' && name.length > 0) {
                     saveBlocksData(name, blocks);
-                    clientMessage('§e保存成功');
+                    mc.clientMessage('§e保存成功');
                 } else {
-                    clientMessage('§c未保存');
+                    mc.clientMessage('§c未保存', name);
                 }
             }, function () {
-                clientMessage('§c未选择保存');
+                mc.clientMessage('§c未选择保存');
             });
             Config.POS_DATA.x = 0;
             Config.POS_DATA.y = 0;
@@ -369,13 +388,13 @@ function onTickEvent() {
             const {x, y, z, name, aux} = task;
             const {x: baseX, y: baseY, z: baseZ} = Config.POS_DATA;
             const command = `setblock ${baseX + x} ${baseY + y} ${baseZ + z} ${name} ${aux}`;
-            requestExecuteCommand(command, function (result) {
+            mc.requestExecuteCommand(command, function (result) {
                 //{"type":"AllOutput","successCount":0,"hasPlayerText":false,"messages":[{"type":"Error","messageId":"commands.generic.disabled","params":[]}]}
                 //{"type":"AllOutput","successCount":1,"hasPlayerText":false,"messages":[{"type":"Success","messageId":"commands.setblock.success","params":[]}]}
                 if (result.messages && result.messages.length > 0) {
                     const message = result.messages[0];
                     if (message.type === 'Error' && message.messageId === 'commands.generic.disabled') {
-                        clientMessage('§c服务器禁止执行此命令，请检查服务器设置');
+                        mc.clientMessage('§c服务器禁止执行此命令，请检查服务器设置');
                     }
                     if (message.type === 'Success' && message.messageId === 'commands.setblock.success') {
                         ;
@@ -386,5 +405,5 @@ function onTickEvent() {
             break;
         }
     }
-    showTipMessage(`§e当前任务剩余: ${Config.BUILD_TASKS.length}`);
+    mc.showTipMessage(`§e当前任务剩余: ${Config.BUILD_TASKS.length}`);
 }

@@ -1,0 +1,925 @@
+{
+  "type": "Menu",
+  "title": {
+    "name": "『Super』",
+    "size": 15,
+    "elevation": 3,
+    "background": "$menu_title_background_color",
+    "padding": [
+      4,
+      4,
+      4,
+      4
+    ],
+    "colors": [
+      "$menu_title_gradient_text_begin_color",
+      "$menu_title_gradient_text_end_color"
+    ],
+    "margins": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "color": "$menu_color",
+  "alpha": 0.85,
+  "can_close": true,
+  "hide": true,
+  "margins": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "image_scaled_size": 40,
+  "radius": 10,
+  "show_dividers": false,
+  "items": [
+    {
+      "type": "Switch",
+      "name": "卡人",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "tag": "fun_super_0",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_CustomStuck.png",
+        "on": "open/NeuronOn_CustomStuck.png",
+        "icon": "open/NeuronOn_CustomStuck.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "百米大刀",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "tag": "fun_super_1",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_InfSword.png",
+        "on": "open/NeuronOn_InfSword.png",
+        "icon": "open/NeuronOn_InfSword.png"
+      },
+      "items": [
+        {
+          "type": "SeekBar",
+          "key": "POS_Y_MAX",
+          "format": "最高Y坐标 - %d",
+          "color": "$menu_item_color",
+          "value": 804,
+          "min": 1,
+          "max": 1000,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "MAX_RANGE",
+          "format": "最远范围 - %d",
+          "color": "$menu_item_color",
+          "value": 500,
+          "min": 1,
+          "max": 1000,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "ATTACK_COUNT",
+          "format": "攻击和点击次数 - %d",
+          "color": "$menu_item_color",
+          "value": 3,
+          "min": 1,
+          "max": 10,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "AUTO_INTERVAL",
+          "format": "自动传送间隔 - %d",
+          "color": "$menu_item_color",
+          "value": 15,
+          "min": 1,
+          "max": 50,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "COLLISION_X_MIN",
+          "format": "最低X碰撞箱 - %.2f",
+          "color": "$menu_item_color",
+          "value": 0.1,
+          "min": 0.1,
+          "max": 2.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "COLLISION_Y_MIN",
+          "format": "最低Y碰撞箱 - %.2f",
+          "color": "$menu_item_color",
+          "value": 0.1,
+          "min": 0.1,
+          "max": 2.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Switch",
+      "name": "悬浮手",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "on": "修改视角FOV",
+      "tag": "fun_super_2",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_FloatingHand.png",
+        "on": "open/NeuronOn_FloatingHand.png",
+        "icon": "open/NeuronOn_FloatingHand.png"
+      },
+      "items": [
+        {
+          "type": "SeekBar",
+          "key": "fov",
+          "format": "视角%.2f",
+          "color": "$menu_item_color",
+          "value": 120.0,
+          "min": 0.0,
+          "max": 180.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Switch",
+      "name": "兔子跳",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "tag": "fun_super_3",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_BunnyHop.png",
+        "on": "open/NeuronOn_BunnyHop.png",
+        "icon": "open/NeuronOn_BunnyHop.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "旋转头",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "on": "自己的头不停旋转",
+      "tag": "fun_super_4",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_SpinHead.png",
+        "on": "open/NeuronOn_SpinHead.png",
+        "icon": "open/NeuronOn_SpinHead.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "伪op",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "on": "让自己拥有假的管理员权限",
+      "tag": "fun_super_5",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_FakeOp.png",
+        "on": "open/NeuronOn_FakeOp.png",
+        "icon": "open/NeuronOn_FakeOp.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "刀刀暴击",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "tag": "fun_super_6",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_CriticalHit.png",
+        "on": "open/NeuronOn_CriticalHit.png",
+        "icon": "open/NeuronOn_CriticalHit.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "自我崩溃",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "on": "快速崩溃自己退出游戏",
+      "tag": "fun_super_7",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_SelfCrash.png",
+        "on": "open/NeuronOn_SelfCrash.png",
+        "icon": "open/NeuronOn_SelfCrash.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "自我介绍",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "on": "进服自动发送“服务器已被入侵”",
+      "tag": "fun_super_8",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_SelfIntro.png",
+        "on": "open/NeuronOn_SelfIntro.png",
+        "icon": "open/NeuronOn_SelfIntro.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "攻击特效",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "on": "攻击目标触发特效",
+      "tag": "fun_super_9",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_AttackEffect.png",
+        "on": "open/NeuronOn_AttackEffect.png",
+        "icon": "open/NeuronOn_AttackEffect.png"
+      },
+      "items": [
+        {
+          "type": "CheckBox",
+          "key": "totem",
+          "name": "图腾",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "lightning_bolt",
+          "name": "闪电",
+          "color": "$menu_item_color",
+          "checked": true,
+          "size": 8
+        },
+        {
+          "type": "SeekBar",
+          "key": "tick",
+          "format": "持续时间%d游戏刻",
+          "color": "$menu_item_color",
+          "value": 30,
+          "min": 10,
+          "max": 60,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Switch",
+      "name": "粒子爆破",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "tag": "fun_super_10",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_ParticleBurst.png",
+        "on": "open/NeuronOn_ParticleBurst.png",
+        "icon": "open/NeuronOn_ParticleBurst.png"
+      },
+      "items": [
+        {
+          "type": "SeekBar",
+          "key": "count",
+          "format": "数量%d",
+          "color": "$menu_item_color",
+          "value": 100,
+          "min": 100,
+          "max": 1000,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "TextView",
+          "name": "选中目标",
+          "color": "$menu_item_color",
+          "key": "click",
+          "size": 12,
+          "padding": [
+            5,
+            5,
+            5,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Switch",
+      "name": "无限光环",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "tag": "fun_super_11",
+      "on": "在租赁服或者联机使用",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_InfiniteAura.png",
+        "on": "open/NeuronOn_InfiniteAura.png",
+        "icon": "open/NeuronOn_InfiniteAura.png"
+      },
+      "items": [
+        {
+          "type": "CheckBox",
+          "key": "player",
+          "name": "玩家",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "mob",
+          "name": "生物",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "crystal",
+          "name": "水晶",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "Switch",
+          "key": "spin",
+          "name": "旋转",
+          "color": "$menu_item_color",
+          "on": "攻击时触发三叉戟范围攻击",
+          "size": 8
+        },
+        {
+          "type": "Switch",
+          "key": "action",
+          "name": "手部动作",
+          "color": "$menu_item_color",
+          "on": "攻击时让手部挥动，其他人可见",
+          "checked": true,
+          "size": 8
+        },
+        {
+          "type": "Switch",
+          "key": "ignore_packet",
+          "name": "忽略正常包",
+          "color": "$menu_item_color",
+          "on": "忽略正常移动数据包，减少延迟",
+          "size": 8
+        },
+        {
+          "type": "SeekBar",
+          "key": "speed",
+          "format": "攻击速度%d",
+          "color": "$menu_item_color",
+          "value": 20,
+          "min": 1,
+          "max": 40,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "count",
+          "format": "攻击数量%d",
+          "color": "$menu_item_color",
+          "value": 3,
+          "min": 1,
+          "max": 40,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "distance",
+          "format": "攻击距离%.2f",
+          "color": "$menu_item_color",
+          "value": 7.0,
+          "min": 1.0,
+          "max": 100.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "height",
+          "format": "传送高度%.2f",
+          "color": "$menu_item_color",
+          "value": 5.0,
+          "min": 0.0,
+          "max": 10.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Switch",
+      "name": "上帝模式",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "tag": "fun_super_12",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_GodMode.png",
+        "on": "open/NeuronOn_GodMode.png",
+        "icon": "open/NeuronOn_GodMode.png"
+      },
+      "items": [
+        {
+          "type": "SeekBar",
+          "key": "height",
+          "format": "高度%.2f",
+          "color": "$menu_item_color",
+          "value": 10000.0,
+          "min": 10.0,
+          "max": 10000.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "x_offset",
+          "format": "X坐标偏移%.2f",
+          "color": "$menu_item_color",
+          "value": 0.0,
+          "min": -10000.0,
+          "max": 10000.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "z_offset",
+          "format": "Z坐标偏移%.2f",
+          "color": "$menu_item_color",
+          "value": 0.0,
+          "min": -10000.0,
+          "max": 10000.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "type": "SeekBar",
+          "key": "motion",
+          "format": "动量%.2f",
+          "color": "$menu_item_color",
+          "value": 10000.0,
+          "min": 10.0,
+          "max": 10000.0,
+          "size": 8,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Switch",
+      "name": "辅助瞄准",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "tag": "fun_super_13",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_AimAssistant.png",
+        "on": "open/NeuronOn_AimAssistant.png",
+        "icon": "open/NeuronOn_AimAssistant.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "背包整理",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "tag": "fun_super_14",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_InventorySort.png",
+        "on": "open/NeuronOn_InventorySort.png",
+        "icon": "open/NeuronOn_InventorySort.png"
+      },
+      "items": [
+        {
+          "type": "CheckBox",
+          "key": "drop_weapons",
+          "name": "丢弃武器",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "drop_hatchets",
+          "name": "丢弃斧头",
+          "color": "$menu_item_color",
+          "size": 8
+        },
+        {
+          "type": "CheckBox",
+          "key": "arrange_items",
+          "name": "排列物品",
+          "color": "$menu_item_color",
+          "size": 8
+        }
+      ]
+    },
+    {
+      "type": "Switch",
+      "name": "拖尾特效",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "tag": "fun_super_15",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_TrailEffect.png",
+        "on": "open/NeuronOn_TrailEffect.png",
+        "icon": "open/NeuronOn_TrailEffect.png"
+      }
+    },
+    {
+      "type": "Switch",
+      "name": "自动围人",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "tag": "fun_super_16",
+      "shortcut": {
+        "type": "CheckedButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "off": "close/NeuronOff_AutoSurround.png",
+        "on": "open/NeuronOn_AutoSurround.png",
+        "icon": "open/NeuronOn_AutoSurround.png"
+      }
+    },
+    {
+      "type": "TextView",
+      "name": "宠物背包",
+      "color": "$menu_item_color",
+      "size": 12,
+      "padding": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "tag": "script_pet_bag",
+      "shortcut": {
+        "type": "ClickButton",
+        "params": [
+          65,
+          65
+        ],
+        "no_circle": true,
+        "icon": "other/Neuron_PetBag.png"
+      },
+      "items": [
+        {
+          "type": "TextView",
+          "name": "打开宠物背包",
+          "color": "$menu_item_color",
+          "key": "openPetBag",
+          "size": 12,
+          "padding": [
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        {
+          "type": "TextView",
+          "name": "关闭宠物背包",
+          "color": "$menu_item_color",
+          "key": "closePetBag",
+          "size": 12,
+          "padding": [
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        {
+          "type": "TextView",
+          "name": "复制宠物背包物品",
+          "color": "$menu_item_color",
+          "key": "copyPetBagItem",
+          "size": 12,
+          "padding": [
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        {
+          "type": "TextView",
+          "name": "移动宠物背包物品",
+          "color": "$menu_item_color",
+          "key": "movePetBagItem",
+          "size": 12,
+          "padding": [
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        {
+          "type": "TextView",
+          "name": "丢弃宠物背包物品",
+          "color": "$menu_item_color",
+          "key": "dropPetBagItem",
+          "size": 12,
+          "padding": [
+            5,
+            5,
+            5,
+            5
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+    authors:
+      - dependabot
+  categories:
+    - title: 新功能 / Features
+      labels:
+        - enhancement
+        - feature
+    - title: 修复 / Fixes
+      labels:
+        - bug
+        - fix
+    - title: 文档与维护 / Documentation & Maintenance
+      labels:
+        - documentation
+        - maintenance
+    - title: 其他变更 / Other Changes
+      labels:
+        - "*"
